@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Quform - Responsive Ajax Contact Form</title>
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="quform/css/page.css" />
+<link rel="stylesheet" type="text/css" href="quform/css/base.css" />
+<link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" />
+</head>
+<body>
+<div class="template-outside">
+
+    <!-- To copy the form HTML, start here -->
+    <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process-all-elements.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">All form elements</h3>
+                <p class="quform-description">This example shows all form elements you can use with Quform.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input">Text input (with tooltip) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input class="quform-tooltip" id="text_input" type="text" name="text_input" data-tippy-content="Example text input field tooltip" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-fat quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input2">Text input (fat) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="text_input2" type="text" name="text_input2" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-full-width quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input3">Text input (full width) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="text_input3" type="text" name="text_input3" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-huge quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input4">Text input (huge) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="text_input4" type="text" name="text_input4" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-large quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input5">Text input (large) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="text_input5" type="text" name="text_input5" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-med quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input6">Text input (med) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="text_input6" type="text" name="text_input6" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-small quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="text_input7">Text input (small) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="text_input7" type="text" name="text_input7" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Single select element -->
+                    <div class="quform-element quform-element-select">
+                        <div class="quform-spacer">
+                            <label for="single_select">Single select <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <select class="quform-tooltip" id="single_select" name="single_select" data-tippy-content="An example tootip on select element">
+                                    <option value="">Please select</option>
+                                    <option value="Option 1">Option 1</option>
+                                    <option value="Option 2">Option 2</option>
+                                    <option value="Option 3">Option 3</option>
+                                    <option value="Option 4">Option 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single select element -->
+
+                    <!-- Begin Subject element -->
+                    <div class="quform-element quform-element-select">
+                        <div class="quform-spacer">
+                            <label for="subject">Subject</label>
+                            <div class="quform-input">
+                                <select class="quform-tooltip" id="subject" name="subject" data-tippy-content="Try selecting 'Other'">
+                                    <option value="General enquiry">General enquiry</option>
+                                    <option value="Sales enquiry">Sales enquiry</option>
+                                    <option value="Support enquiry">Support enquiry</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Subject element -->
+
+                    <!-- Multi Select element -->
+                    <div class="quform-element quform-element-multi-select">
+                        <div class="quform-spacer">
+                            <label for="multi_select">Multi select <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <select class="quform-tooltip" data-tippy-content="Hold Ctrl + click to select multiple items" id="multi_select" name="multi_select[]" multiple="multiple">
+                                    <option value="Multi option 1">Multi option 1</option>
+                                    <option value="Multi option 2">Multi option 2</option>
+                                    <option value="Multi option 3">Multi option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Multi Select element -->
+
+                    <!-- Single Checkbox element -->
+                    <div class="quform-element quform-element-checkbox">
+                        <div class="quform-spacer">
+                            <div class="quform-input">
+                               <label for="single_checkbox"><input id="single_checkbox" name="single_checkbox" value="1" type="checkbox" /> Single checkbox <span class="quform-required">*</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Checkbox element -->
+
+                    <!-- Multi Checkbox element -->
+                    <div class="quform-element quform-element-checkbox">
+                        <div class="quform-spacer">
+                            <label>Multi checkbox <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <div class="quform-options">
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox[]" value="One" type="checkbox" /> One</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox[]" value="Two" type="checkbox" /> Two</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox[]" value="Three" type="checkbox" /> Three</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox[]" value="Four" type="checkbox" /> Four</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox[]" value="Five" type="checkbox" /> Five</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Multi Checkbox element -->
+
+
+                    <!-- Multi Checkbox element (Inline) -->
+                    <div class="quform-element quform-element-checkbox">
+                        <div class="quform-spacer">
+                            <label>Multi checkbox (Inline) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <div class="quform-options quform-options-inline">
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox2[]" value="One" type="checkbox" /> One</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox2[]" value="Two" type="checkbox" /> Two</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox2[]" value="Three" type="checkbox" /> Three</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox2[]" value="Four" type="checkbox" /> Four</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="multi_checkbox2[]" value="Five" type="checkbox" /> Five</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Multi Checkbox element (Inline) -->
+
+                    <!-- Begin Radio element -->
+                    <div class="quform-element quform-element-radio">
+                        <div class="quform-spacer">
+                            <label>Radio button <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <div class="quform-options">
+                                    <div class="quform-option">
+                                        <label><input name="radio_button2" value="Yes" type="radio" /> Yes</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="radio_button2" value="No" type="radio" /> No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Radio element -->
+
+                    <!-- Begin Radio element(Inline)  -->
+                    <div class="quform-element quform-element-radio">
+                        <div class="quform-spacer">
+                            <label>Radio button (Inline) <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <div class="quform-options quform-options-inline">
+                                    <div class="quform-option">
+                                        <label><input name="radio_button" value="Yes" type="radio" /> Yes</label>
+                                    </div>
+                                    <div class="quform-option">
+                                        <label><input name="radio_button" value="No" type="radio" /> No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Radio element(Inline) -->
+
+                    <!-- Begin Textarea element -->
+                    <div class="quform-element quform-element-textarea quform-huge">
+                        <div class="quform-spacer">
+                            <label for="textarea">Textarea <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <textarea id="textarea" name="textarea" class="quform-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Textarea element -->
+
+                    <!-- Begin Date element -->
+                    <div class="quform-element quform-element-date">
+                        <div class="quform-spacer">
+                            <label>Date <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <select name="date[day]">
+                                    <option value="">Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select name="date[month]">
+                                    <option value="">Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <select name="date[year]">
+                                    <option value="">Year</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Date element -->
+
+                    <!-- Begin Time element -->
+                    <div class="quform-element quform-element-time">
+                        <div class="quform-spacer">
+                            <label>Time <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <select name="time[hour]">
+                                    <option value="">HH</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+                                <select name="time[minute]">
+                                    <option value="">MM</option>
+                                    <option value="00">00</option>
+                                    <option value="15">15</option>
+                                    <option value="30">30</option>
+                                    <option value="45">45</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Time element -->
+
+                    <!-- Begin Upload element -->
+                    <div class="quform-element quform-element-file">
+                        <div class="quform-spacer">
+                            <label for="upload">File upload <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="file" id="upload" name="upload" />
+                                <p class="quform-description">All files allowed.  Maximum size 10MB.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Upload element -->
+
+                    <!-- Begin Grouped Upload element -->
+                    <div class="quform-element quform-element-file">
+                        <div class="quform-spacer">
+                            <label>Grouped file upload <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <div class="quform-input-file">
+                                    <input type="file" name="uploads[]" />
+                                </div>
+                                <div class="quform-input-file">
+                                    <input type="file" name="uploads[]" />
+                                </div>
+                                <div class="quform-input-file">
+                                    <input type="file" name="uploads[]" />
+                                </div>
+                                <p class="quform-description">Allowed extensions .jpg, .jpeg, .png, .gif. Maximum size 1MB (each). Two uploads required.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Grouped Upload element -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha quform-left-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit quform-button-fat">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Fat button</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit quform-button-small">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Small</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit quform-button-med">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Medium</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit quform-button-large">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Large</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit quform-button-full-width">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Full width</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+               </div>
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+</div>
+<script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="quform/js/plugins.js"></script>
+<script type="text/javascript" src="quform/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Quform documentation by ThemeCatcher</title>
+<link rel="stylesheet" type="text/css" href="assets/styles.css" />
+</head>
+<body>
+<div class="outside">
+<!-- Begin Wrapper -->
+<div id="wrapper">
+    <!-- Begin Header -->
+    <div id="header">
+        <div class="intro">Quform documentation by ThemeCatcher</div>
+        <div class="theme">Quform</div>
+        <div class="about clearfix">
+            <div class="about-left">
+                <table>
+                    <tr>
+                        <td class="about-col-1">Created</td>
+                        <td class="about-col-2">24 December 2010</td>
+                    </tr>
+                    <tr>
+                        <td class="about-col-1">Version</td>
+                        <td class="about-col-2">2.5.0 (14 December 2020)</td>
+                    </tr>
+                    <tr>
+                        <td class="about-col-1">Author</td>
+                        <td class="about-col-2"><a href="https://www.themecatcher.net/" class="popup">ThemeCatcher</a></td>
+                    </tr>
+                    <tr>
+                        <td class="about-col-1">Contact Us</td>
+                        <td class="about-col-2"><a href="http://codecanyon.net/user/ThemeCatcher" class="popup">via CodeCanyon</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="about-right">
+                <p>Thank you for purchasing Quform. If you have any questions that are not answered
+                in this help file, please feel free to contact us via the contact form on our
+                <a class="popup" href="http://codecanyon.net/user/ThemeCatcher">CodeCanyon profile</a> page.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+    <div id="content" class="clearfix">
+
+      <h1 class="thin"><a id="toc"></a>Table of contents<span class="search-title">Search</span></h1>
+
+      <div class="menu-search-wrap clearfix">
+          <div class="search clearfix">
+            <p>To search, click the <span class="action">Show all sections</span> link below and use
+            your browser's search function: Ctrl+F (or Command+F on Mac)</p>
+            <div class="show-sections-wrap">
+                <a id="show-sections">Show all sections</a>
+            </div>
+          </div>
+
+	      <div class="menu clearfix">
+	        <ol>
+	            <li><a href="#one">Installation</a></li>
+	            <li><a href="#two">Customising your form</a></li>
+	            <li><a href="#three">Advanced form settings</a></li>
+	            <li><a href="#four">Troubleshooting</a></li>
+	            <li><a href="#five">Further support</a></li>
+	        </ol>
+	      </div>
+      </div>
+      <h1>Installation<a id="one" class="top-link" href="#toc">Top</a></h1>
+      <h2 class="toggler toggler-closed">How to install</h2>
+      <div>
+      <p>To install the form into your web page, there are 5 things you must do:</p>
+      <ul>
+        <li>1. Copy the HTML code for the form into your web page</li>
+        <li>2. Copy the CSS stylesheet link(s) into your web page</li>
+        <li>3. Copy the JavaScript links into your web page</li>
+        <li>4. Configure the form to send messages to your email address</li>
+        <li>5. Upload the <code>quform</code> folder to your web server</li>
+      </ul>
+      <p>Each step is explained in more detail below.</p>
+      <h3>1. Copy the HTML code for the form into your web page</h3>
+      <p>Open the <code>index.html</code> file and locate the HTML code for the
+      form, it is located between the HTML comments <code>&lt;!-- To copy the form start here --&gt;</code>
+      and <code>&lt;!-- To copy the form end here --&gt;</code>. Select all of this code then copy and paste
+      it into the body of your web page.</p>
+      <h3>2. Copy the link to the CSS stylesheet into your web page</h3>
+      <p>There is one main stylesheet used by the form, the <code>base.css</code> located in <code>quform/css/</code></p>
+      <p>The other optional stylesheet is a Theme style, these are located in <code>quform/themes/</code>. There are 6 options for Themes 3 dark and 3 light, for more information on this visit the <a href="#changing-the-form-theme" class="section-link">Changing the form theme</a> section.</p>
+      <ul>
+       <li><strong>1. Base:</strong>
+            <ul>
+                <li>quform/css/base.css</li>
+            </ul>
+        </li>
+        <li><strong>2. Themes:</strong>
+            <ul>
+                <li>quform/themes/light/light.css</li>
+                <li>quform/themes/light/rounded.css</li>
+                <li>quform/themes/dark/dark.css</li>
+                <li>quform/themes/dark/rounded.css</li>
+                <li>quform/themes/minimal/light.css</li>
+                <li>quform/themes/minimal/dark.css</li>
+            </ul>
+        </li>
+      </ul>
+      <p>Here is an example of the stylesheets in the head. NB: if you change the theme stylesheet you will also need to add a new class into the <code>quform-outer</code> div. You can get more information on this in the <a href="#changing-the-form-theme" class="section-link">Changing the form theme</a> section.</p>
+      <pre>&lt;link rel="stylesheet" type="text/css" href="quform/css/base.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" /&gt;</pre>
+      <h3>3. Copy the JavaScript links into your web page</h3>
+      <p>The form requires the 3 JavaScript files shown below, to include them in your web page, copy the lines below and
+      paste them into your web page. The best place to put these is at the end of the page, just before the closing <code>&lt;/body&gt;</code> tag.</p>
+<pre>&lt;script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="quform/js/plugins.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="quform/js/scripts.js"&gt;&lt;/script&gt;</pre>
+          <p><strong>Note: if your web page already uses the jQuery library you do not need the first file (jquery-3.5.1.min.js) so remove that line, jQuery needs to be version 1.8.0 or later for the form to work.</strong></p>
+      <h3>4. Configure the form to send messages to your email address</h3>
+      <p>To configure the form, open <code>quform/process.php</code> and search for the code below.</p>
+      <pre>$config['recipients'] = '';</pre>
+      <p>Inside the single quotes enter the email address that you would like to receive the submitted form data. For example:</p>
+<pre>$config['recipients'] = 'me@example.com';</pre>
+      <h4>Set the "From" address</h4>
+      <p>While you are in <code>quform/process.php</code> you should also set the "From" email address,
+      search for the term <span class="find">$config['from'] = '';</span> and enter an email address inside the single quotes.
+      Any emails you get from the script will appear to be sent from this address. Some web hosts will block emails sent from an
+      email address that is not hosted on their servers, so it's usually a good idea to set this
+      to an email address that has the same domain as the site that the form is hosted on.</p>
+      <pre>$config['from'] = 'company@example.com';</pre>
+      <p>If you want to include your name or company name in the "From" address you can also use the code below.</p>
+      <pre>$config['from'] = array('company@example.com' =&gt; 'Company');</pre>
+      <h4>Further configuration</h4>
+      <p>You have now completed is the minimal setup that is required for the form to work, you can now upload the form to your web server as described in step 5.
+      You can also continue to change the settings in process.php at this time or upload additional changes as you build your form.
+      Each setting in process.php is accompanied by a comment explaining what it does and what the options are. You can also refer the customization sections
+      below for further help.</p>
+      <h3>5. Upload the <code>quform</code> folder to your web server via FTP</h3>
+      <p>You should now upload the <code>quform</code> folder so that it resides in the same
+      place as your web page containing the form.  The <code>quform</code> <strong>folder</strong> and <strong>your PHP/HTML file</strong> should be in the same folder on your web server.
+      If this setup is not possible, just change the <code>action=""</code> attribute of the <code>&lt;form&gt;</code> tag to point to the location of the <code>quform/process.php</code> file
+      relative to the page with your form on it.</p>
+      <p>Now visit your web page in your browser, the form should appear and the contact form should work correctly.  See the <a href="#four">troubleshooting</a> section below if
+      you are having problems.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Installing using existing form HTML</h2>
+      <div>
+        <p>If you have already built a form in HTML and want to use Quform to handle the form processing, follow these instructions instead of the normal installation instructions.</p>
+
+        <h2>Step 1</h2>
+        <p>Find the <code>&lt;form&gt;</code> tag in your existing form HTML and add the class <code>quform</code> to it, and set the action attribute to the path to the <span class="file">quform/process.php</span> file and make sure that the method attribute is <code>post</code>.
+            For file uploads to work when JavaScript is disabled, add the attribute <code>enctype="multipart/form-data"</code>.</p>
+        <pre>&lt;form class="quform" action="quform/process.php" method="post" enctype="multipart/form-data"&gt;</pre>
+
+        <p>Wrap all of the form fields in a &lt;div&gt; with class <code>quform-elements</code>, the success message will be displayed at the top of this. If you already have a tag wrapping all fields just add the class <code>quform-elements</code> to it. This tag must be inside the <code>&lt;form&gt;</code> tag.</p>
+        <pre>&lt;div class="quform-elements"&gt;
+... all form fields here ...
+&lt;/div&gt;</pre>
+
+        <p>Wrap each form field in a <code>&lt;div&gt;</code> with class <code>quform-input</code>, validation error messages will be displayed at the bottom of this. If you already have a tag wrapping each field just add the class <code>quform-input</code> to it.</p>
+        <pre>&lt;div class="quform-input"&gt;
+... one form field here ...
+&lt;/div&gt;
+&lt;div class="quform-input"&gt;
+... one form field here ...
+&lt;/div&gt;</pre>
+
+        <h2>Step 2</h2>
+        <p>Add the link to the Quform base stylesheet in the <code>&lt;head&gt;</code> section of the page.</p>
+        <pre>&lt;link rel="stylesheet" type="text/css" href="quform/css/base.css" /&gt;</pre>
+
+        <h2>Step 3</h2>
+        <p>Add the links to the Quform JavaScript files just before the closing <code>&lt;/body&gt;</code> tag.</p>
+        <pre>&lt;script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="quform/js/plugins.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="quform/js/scripts.js"&gt;&lt;/script&gt;</pre>
+        <p><strong>Note: if your web page already uses the jQuery library you do not need the first file (jquery-3.5.1.min.js) so remove that line, jQuery needs to be version 1.8.0 or later for the form to work.</strong></p>
+
+        <h2>Step 4</h2>
+        <p>To configure the form, open <code>quform/process.php</code> and search for the code below.</p>
+        <pre>$config['recipients'] = '';</pre>
+        <p>Inside the single quotes enter the email address that you would like to receive the submitted form data. For example:</p>
+        <pre>$config['recipients'] = 'me@example.com';</pre>
+        <h4>Set the "From" address</h4>
+        <p>While you are in <code>quform/process.php</code> you should also set the "From" email address, search for the term <span class="find">$config['from'] = '';</span> and enter an email address inside the single quotes. Any emails you get from the script will appear to be sent from this address. Some web hosts will block emails sent from an email address that is not hosted on their servers, so it's usually a good idea to set this to an email address that has the same domain as the site that the form is hosted on.</p>
+        <pre>$config['from'] = 'company@example.com';</pre>
+        <p>If you want to include your name or company name in the "From" address you can also use the code below.</p>
+        <pre>$config['from'] = array('company@example.com' =&gt; 'Company');</pre>
+        <h4>Add PHP configuration for each existing field</h4>
+        <p>So that the fields can be processed you need to add an element configuration to the process.php file for each field. For most fields you can simply add this code to the element configuration section of process.php for each field.</p>
+        <pre>$element = new Quform_Element('my_element_name', 'My element label');
+        $form->addElement($element);</pre>
+        <ul>
+          <li>Replace <code>my_element_name</code> to exactly match the <code>name</code> attribute of the field in the form HTML</li>
+          <li>Replace <code>My element label</code> with a label for this field</li>
+        </ul>
+        <p>You can also remove any existing element configuration from process.php that does not apply to your form. See the <a href="http://support.themecatcher.net/quform-php/customisation">Customisation page</a> for more information about element configuration.</p>
+
+        <h2>Step 5</h2>
+        <p>You should now upload the <code>quform</code> folder so that it resides in the same place as your web page containing the form.  The <code>quform</code> <strong>folder</strong> and <strong>your PHP/HTML file</strong> should be in the same folder on your web server. If this setup is not possible, just change the <code>action=""</code> attribute of the <code>&lt;form&gt;</code> tag to point to the location of the <code>quform/process.php</code> file relative to the page with your form on it.</p>
+        <p>Now visit your web page in your browser, the form should appear and the contact form should work correctly.  See the <a href="http://support.themecatcher.net/quform-php/troubleshooting">troubleshooting</a> section if you are having problems.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Updating the script</h2>
+      <div>
+        <p>Updating the script can be a time consuming process depending on how many files you have modified and what has changed in the update. Unless there is a
+        critical security issue update, or there is a feature you want, it would save time to stay on the version you are on currently.</p>
+
+        <h3>Step 1</h3>
+        <p>Download and extract the new version of Quform from your <a href="http://codecanyon.net/downloads" target="_blank">CodeCanyon Downloads page</a>.</p>
+
+        <h3>Step 2</h3>
+        <p>Make the same changes to the files in the new package that you did to the previous Quform version. Mainly this will be copying over the settings from <code>process.php</code> into the new <code>process.php</code> file. Copy email recipients, element configuration and anything else you changed. The form HTML on your site can probably stay the same. If you have made any CSS changes in <code>base.css</code> make the same changes to the new <code>base.css</code> file.</p>
+
+        <h3>Step 3</h3>
+        <p>On your server rename the <code>quform</code> folder to <code>quform2</code>, which means you have a backup of it for now. Then upload the <code>quform</code> folder from the new package in its place. Test the form again and sort any issues if needed.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Using the examples</h2>
+      <div>
+        <p>We have included some example files so that you can quickly create forms by copying and pasting from them. The example forms each use a different process file.</p>
+
+        <h3>Using elements from the examples</h3>
+        <p>If you copy an element from one of the example forms, you will also need to copy the element configuration from the form process file. To find the correct file look at the <code>&lt;form&gt;</code> tag of the example form and check the <code>action</code> attribute. For example, the <code>example-file-uploads.html</code> form example if processed by the file <code>quform/process-file-uploads.php</code></p>
+        <pre>&lt;form class="quform" action="<strong>quform/process-file-uploads.php</strong>" method="post" enctype="multipart/form-data"&gt;</pre>
+
+        <h3>Starting with an example form</h3>
+        <p>If you are starting with one of the example forms, make sure you are modifying the correct process file. The documentation will ask you to modify the <code>process.php</code> file, but you should check the <code>action</code> attribute of the example form to see which file to modify instead.</p>
+      </div>
+      <h1>Customising your form<a id="two" class="top-link" href="#toc">Top</a></h1>
+      <h2 class="toggler toggler-closed">Adding a form element</h2>
+      <div>
+      <p>To add a form element, there are three steps.</p>
+      <ul>
+        <li>1. Pick a unique name for the element</li>
+        <li>2. Add the HTML for the form element to your web page</li>
+        <li>3. Add the form element to the <code>process.php</code> file to make the PHP script aware of the
+        new form element</li>
+      </ul>
+      <p>Each step is explained in more detail below.</p>
+      <h3>1. Pick a unique name for the element</h3>
+      <p>Choose a name for your new element that is not currently used by another element. The name should be all lower case and multiple words should be joined by an underscore.
+      For example, <code>fax_number</code>.</p>
+      <h3>2. Add the HTML for the form element to your web page</h3>
+      <p>The easiest way to add another form element is to copy the existing HTML code from another element, including
+      all surrounding wrappers.  Each element included with the form has comments surrounding it and the file <code>example-all-elements.html</code> has example code
+      for most form elements you will ever need to use. </p>
+      <p>To copy the entire element,
+      you would select the all the HTML code between the comments.  For example, lets say we wanted
+      to add a new required field called "Fax number".  We would copy the HTML for the "Name" field by searching
+      <strong>in index.html</strong> for <span class="find">&lt;!-- Begin Text input element</span>, you will be taken to the code for the name
+      element, copy the code inside the HTML comments surrounding the name element. Paste the code in between the form elements that you would like your new element
+      to be between.  You would then change all occurrences of "name" in your copied code with your
+      unique name "fax_number" (except in this case do not change the actual name attribute key i.e. it
+      should be <code>name="fax_number"</code> NOT <code>fax_number="fax_number"</code> on the
+      input), after all the highlighted changes have been made we have:</p>
+
+      <pre>
+&lt;!-- Begin Text input element --&gt;
+&lt;div class="quform-element quform-element-text"&gt;
+    &lt;div class="quform-spacer"&gt;
+        &lt;label for="<strong>fax_number</strong>"&gt;<strong>Fax number</strong> &lt;span class="quform-required"&gt;*&lt;/span&gt;&lt;/label&gt;
+        &lt;div class="quform-input"&gt;
+            &lt;input id="<strong>fax_number</strong>" type="text" name="<strong>fax_number</strong>" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Text input element --&gt;
+    </pre>
+      <h3>3. Add the form element to the <code>process.php</code> file to make the PHP script aware of the
+        new form element</h3>
+      <p>To make the PHP script aware of the new element, you will need to edit the <code>quform/process.php</code> file.
+      You will need to create a new Quform_Element object for your new field, if you don't know how to do that just copy the existing code
+      for the <strong>name</strong> element. In <code>process.php</code> search for the term <span class="find">$name</span> and you should find
+      4 lines of PHP code. Copy and paste this code above or below the existing 4 lines of code and then change everything that says "name" to your unique name "fax_number", giving us:</p>
+<pre>$<strong>fax_number</strong> = new Quform_Element('<strong>fax_number</strong>', <b>'Fax number'</b>);
+$<strong>fax_number</strong>-&gt;addFilter('trim');
+$<strong>fax_number</strong>-&gt;addValidator('required');
+$form-&gt;addElement($<strong>fax_number</strong>);</pre>
+      <p>IMPORTANT: The parts in red above must match the <code>name=""</code> attribute of the form element in the HTML, they should both be identical
+      to your unique name you created in Step 1. This tells the PHP script what element you are referring to.</p>
+      <p>The filter you are adding to the element in the code above will trim whitespace from the start
+      and end of the value submitted by the form user.  The validator you are adding in the code above will make the field required.  If you do not want
+      those filters or validators for the element just delete the line that adds them. For more help on Filters and Validators see the <a href="#three">Advanced form customisation section</a>
+      below.</p>
+      <p>The other text we changed (<code>'Fax number'</code>) sets the label in the email and the
+      non-JavaScript version of the form.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Adding a Date form element</h2>
+      <div><p>Adding a Date element is slightly different from adding any other element, there are three steps.</p>
+      <ul>
+        <li>1. Pick a unique name for the element</li>
+        <li>2. Add the HTML for the form element in your web page</li>
+        <li>3. Add the form element to the process.php file to make the PHP script aware of the
+        new form element</li>
+      </ul>
+      <p>Each step is explained in more detail below.</p>
+      <h3>1. Pick a unique name for the element</h3>
+      <p>Choose a name for your new element that is not currently used by another element. The name should be all lower case and multiple words should be joined by an underscore.
+      If this is the first date element in your form a good name would be <code>date</code>.</p>
+      <h3>2. Add the HTML for the form element in your web page</h3>
+      <p>The easiest way to add another form element is to copy the existing HTML code for the element, including
+      all surrounding wrappers. There is an example of the Date element HTML in the
+      file <code>example-all-elements.html</code>. So to copy the entire element
+      you would select the all the HTML code between the comments:
+      <pre>&lt;!-- Begin Date element --&gt;
+    ...
+&lt;!-- End Date element --&gt;</pre>
+      <p>Paste the HTML into your own form in the position you desire.</p>
+      <h3>3. Add the form element to the process.php file to make the PHP script aware of the
+       new form element</h3>
+      <p>To make the PHP script aware of the new element, you will need to edit the file <code>quform/process.php</code>.
+      You will need to create a new Quform_Element_Date object for your new field, if you don't know how to do that just copy the existing code
+      for the Date element in the file <code>quform/process-all-elements.php</code>. If your unique name from step one is not <code>date</code>,
+      replace the red parts of the code with your unique name.</p>
+<pre>$<strong>date</strong> = new Quform_Element_Date('<strong>date</strong>', 'Date');
+$<strong>date</strong>-&gt;addValidators(array('required', 'date'));
+$form-&gt;addElement($<strong>date</strong>);</pre>
+      <p>IMPORTANT: The second occurrence <strong>date</strong> in red above must match the first part of the <code>name=""</code> attribute of the select elements in the HTML (before the [month], [day], [year] parts). This tells the PHP script
+      what element you are referring to.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Adding a Time form element</h2>
+      <div><p>Adding a Time element is slightly different from adding any other element, there are three steps.</p>
+      <ul>
+        <li>1. Pick a unique name for the element</li>
+        <li>2. Add the HTML for the form element in your web page</li>
+        <li>3. Add the form element to the process.php file to make the PHP script aware of the
+        new form element</li>
+      </ul>
+      <p>Each step is explained in more detail below.</p>
+      <h3>1. Pick a unique name for the element</h3>
+      <p>Choose a name for your new element that is not currently used by another element. The name should be all lower case and multiple words should be joined by an underscore.
+      If this is the first date element in your form a good name would be <code>time</code>.</p>
+      <h3>2. Add the HTML for the form element in your web page</h3>
+      <p>The easiest way to add another form element is to copy the existing HTML code for the element, including
+      all surrounding wrappers. There is an example of the Time element HTML in the
+      file <code>example-all-elements.html</code>. So to copy the entire element
+      you would select the all the HTML code between the comments:
+      <pre>&lt;!-- Begin Time element --&gt;
+    ...
+&lt;!-- End Time element --&gt;</pre>
+      <p>Paste the HTML into your own form in the position you desire.</p>
+      <h3>3. Add the form element to the process.php file to make the PHP script aware of the
+       new form element</h3>
+      <p>To make the PHP script aware of the new element, you will need to edit the file <code>quform/process.php</code>.
+      You will need to create a new Quform_Element_Time object for your new field, if you don't know how to do that just copy the existing code
+      for the Time element in the file <code>quform/process-all-elements.php</code>. If your unique name from step one is not <code>time</code>,
+      replace the red parts of the code with your unique name.</p>
+<pre>$<strong>time</strong> = new Quform_Element_Time('<strong>time</strong>', 'Time');
+$<strong>time</strong>-&gt;addValidators(array('required', 'time'));
+$form-&gt;addElement($<strong>time</strong>);</pre>
+      <p>IMPORTANT: The second occurrence of <strong>time</strong> in red above must match the first part of the <code>name=""</code> attribute of the select elements in the HTML (before the [hour], [minute] parts). This tells the PHP script
+      what element you are referring to.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Adding a multiple value form element</h2>
+      <div><p>There are a couple of elements that can have multiple values, for example, a group of checkboxes or a multiple select element.
+      When adding these elements, you need to add a pair of square brackets to the name attribute of the element <code>[]</code>.
+      To add a multiple form element, there are three steps.</p>
+      <ul>
+        <li>1. Pick a unique name for the element</li>
+        <li>2. Add the HTML for the form element in your web page</li>
+        <li>3. Add the form element to the process.php file to make the PHP script aware of the
+        new form element</li>
+      </ul>
+      <p>Each step is explained in more detail below.</p>
+      <h3>1. Pick a unique name for the element</h3>
+      <p>Choose a name for your new element that is not currently used by another element. The name should be all lower case and multiple words should be joined by an underscore.
+      Because this is a multiple value element, you should also add a pair of square brackets to the end. For example, <code>pizza_toppings[]</code>.</p>
+      <h3>2. Add the HTML for the form element in your web page</h3>
+      <p>The easiest way to add another form element is to copy the existing HTML code for the element, including
+      all surrounding wrappers. There is an example of most HTML form elements and the code you should use in the
+      file <code>example-all-elements.html</code>. Each element included with the form has comments surrounding it. So to copy the entire element
+      you would select the all the HTML code between the comments.  For example, lets say we wanted
+      to add a multi checkbox field.  We would copy the HTML for the "Multi checkbox" element by searching inside
+      <strong>example-all-elements.html</strong> for the term <span class="find">Multi Checkbox</span>
+      then copying the HTML for the element and pasting the code in between the form elements that you would like your new element
+      to be between.  You would then change all occurrences of "multi_checkbox[]" in your copied code with the name you want to give your new element, below I have given
+      it the name "pizza_toppings[]".</p>
+
+    <pre>
+&lt;!-- Multi Checkbox element --&gt;
+&lt;div class="quform-element quform-element-checkbox"&gt;
+    &lt;div class="quform-spacer"&gt;
+        &lt;label&gt;Multi checkbox &lt;span class="quform-required"&gt;*&lt;/span&gt;&lt;/label&gt;\
+        &lt;div class="quform-input"&gt;
+            &lt;div class="quform-options"&gt;
+                &lt;div class="quform-option"&gt;
+                  &lt;label&gt;&lt;input name="pizza_toppings[]" value="Ham" type="checkbox" /&gt; Ham&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="quform-option"&gt;
+                  &lt;label&gt;&lt;input name="pizza_toppings[]" value="Pepperoni" type="checkbox" /&gt; Pepperoni&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="quform-option"&gt;
+                  &lt;label&gt;&lt;input name="pizza_toppings[]" value="Pineapple" type="checkbox" /&gt; Pineapple&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="quform-option"&gt;
+                  &lt;label&gt;&lt;input name="pizza_toppings[]" value="Mushrooms" type="checkbox" /&gt; Mushrooms&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="quform-option"&gt;
+                  &lt;label&gt;&lt;input name="pizza_toppings[]" value="Olives" type="checkbox" /&gt; Olives&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Multi Checkbox element --&gt;
+</pre>
+      <h3>3. Add the form element to the process.php file to make the PHP script aware of the
+        new form element</h3>
+      <p>To make the PHP script aware of the new element, you will need to edit the file <code>quform/process.php</code>.
+      You will need to create a new Quform_Element object for your new field, if you don't know how to do that just copy the existing code
+      for the one of the existing elements then change the name to suit your new element or use the code below. <strong>The difference with multiple elements
+      is the you need to add <code>[]</code> to the end of the name in process.php also. Continuing the above example would give us:</strong></p>
+<pre>$pizzaToppings = new Quform_Element('<strong>pizza_toppings[]</strong>');
+$form-&gt;addElement($pizzaToppings);</pre>
+      <p>IMPORTANT: The part in red above must match the <code>name=""</code> attribute of the form element in the HTML. This tells the PHP script
+      what element you are referring to.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Removing a form element</h2>
+      <div>
+          <h3>Step 1</h3>
+          <p>Remove the HTML for the form element in your web page. Each form element and its associated wrappers are commented individually in <code>index.html</code>.  Find the form element you want to remove by looking at the text inside in the <code>&lt;label&gt;</code> tag.  Once you've found it, delete the HTML code between the comments surrounding the element. For example, to remove the <strong>Type the word</strong> (CAPTCHA) element, search <code>index.html</code> for the term <span class="find">Type the word</span> and delete the lines between the start and end comments surrounding the element HTML as shown below.</p>
+          <pre>&lt;!-- Begin Captcha element --&gt;
+          ... Delete everything between these comments (and the comments too) ...
+          &lt;!-- End Captcha element --&gt;</pre>
+          <h3>Step 2</h3>
+          <p>Remove the form element from the process.php file to make the PHP script aware that the form element is no longer there. In <code>quform/process.php</code>, locate the code that creates the form element you want to remove. If you wanted to delete the <strong>Type the word</strong> (CAPTCHA) element, search for the term <span class="find">$captcha</span>, the code you are looking for would be:</p>
+          <pre>$captcha = new Quform_Element('type_the_word', 'Type the word');
+          $captcha-&gt;addFilter('trim');
+          $captcha-&gt;addValidator('required');
+          $captcha-&gt;addValidator('identical', array('token' =&gt; 'catch'));
+          $captcha-&gt;setIsHidden(true);
+          $form-&gt;addElement($captcha);</pre>
+          <p>Remove (or just comment out) all of these lines.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Making a field required</h2>
+      <div>
+          <p>A required field simply has a validator called <code>required</code> added to it.  You can use the
+          method <code>addValidator()</code> on your element to add the required validator.
+          In <code>process.php</code> enter code on a new line to
+          add the validator, for example if you wanted to make the subject field required, search for the term <span class="find">$subject</span>
+          and add the highlighted line of code as shown below.</p>
+          <pre>$subject = new Quform_Element('subject');
+$subject-&gt;addFilter('trim');
+<strong>$subject-&gt;addValidator('required');</strong>
+$form-&gt;addElement($subject);</pre>
+          <p>It may also be a good idea to add an asterisk to the element label on your web page to let
+          users know that the element is now required. Here is the preset HTML we have for this on a form element label:</p>
+<pre>&lt;label&gt;Grouped file upload <strong>&lt;span class="quform-required"&gt;*&lt;/span&gt;</strong>&lt;/label&gt;</pre>
+
+      </div>
+      <h2 class="toggler toggler-closed">Adding an element description</h2>
+      <div>
+      <p>Simply add the highlighted HTML inside the input wrapper under the input, select textarea etc.</p>
+<pre>
+&lt;div class="quform-input"&gt;
+    &lt;input type="file" id="upload" name="upload" /&gt;
+    <strong>&lt;p class="quform-description"&gt;All files allowed.  Maximum size 10MB.&lt;/p&gt;</strong>
+&lt;/div&gt;</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the required error message - "This field is required"</h2>
+      <div>
+          <p>To change the required message, pass in an additional parameter to the <code>addValidator</code> line, containing
+          an array of options with your message, the syntax and array nesting is important. Copying the code here is a good idea,
+          just be sure to change <code>$element</code> to match your element's unique name.</p>
+          <pre>$element-&gt;addValidator('required', array(
+    'messages' =&gt; array('required' =&gt; 'This is a required field')
+));</pre>
+          <p>NOTE: if you are having any problems with this, you can change the message directly in the file lib/Quform/Validator/Required.php
+          near the top of the file. The same goes for the other validators.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Making a field not required</h2>
+      <div>
+        <p>To make a field not required you need to remove the 'required' validator.  Open <code>process.php</code>
+        and find the PHP code for the element you want to change.  There should be code that looks like the following:</p>
+        <pre>
+$element-&gt;addValidator('required'); // Single validator
+or
+$element-&gt;addValidators(array('required', 'email')); // Multiple validators
+</pre>
+        <p>If the element has the single validator line of code, simply delete or comment out the line adding the required validator.
+        If the element has the multiple validators line, remove the 'required' string and the comma after it.  The multiple
+        validators line would now look like this:</p>
+<pre>
+$element-&gt;addValidators(array('email')); // Multiple validators (required removed)
+</pre>
+        <p>It might also be a good idea to remove the asterisk from the element label on your web page to let users know that the field is no longer required.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Input and button sizes</h2>
+      <div>
+      <p>There are a list of CSS preset sizes for form input and button sizes. Use the classes listed below to modify your element sizes quickly and consistently throughout your form.</p>
+
+      <h3>Input, select and textarea sizes</h3>
+      <p>You can add any of the styles below to the element outer wrapper (<code>quform-element</code>).</p>
+      <p>Add the class like this example:</p>
+      <pre>
+&lt;!-- Begin Text input element --&gt;
+&lt;div class="quform-element <strong>quform-small</strong> quform-element-text"&gt;</pre>
+      <ul>
+      <li>quform-small</li>
+      <li>quform-med</li>
+      <li>quform-large</li>
+      <li>quform-huge</li>
+      <li>quform-full-width</li>
+      <li>quform-fat</li>
+      </ul>
+
+      <h3>Specific size for a single field</h3>
+      <p>To make a single field have a specific size you can use an inline CSS style on the <code>input</code> tag to set the width. Example below.</p>
+      <pre>&lt;input id="email" type="text" name="email" <strong>style="width: 250px;"</strong> /&gt;</pre>
+
+      <h3>Button sizes</h3>
+      <p>You can add any of the styles below to the button outer wrapper (<code>quform-submit</code>).</p>
+      <p>Add the class like this example:</p>
+      <pre>
+&lt;!-- Begin Submit button --&gt;
+&lt;div class="quform-submit <strong>quform-button-small</strong>"&gt;</pre>
+      <ul>
+      <li>quform-button-small</li>
+      <li>quform-button-med</li>
+      <li>quform-button-large</li>
+      <li>quform-button-full-width</li>
+      <li>quform-button-fat</li>
+      </ul>
+      <p>If you would like to change the sizes of these styles you can find them in the base.css, search the document for <span class="find">/*Preset element sizes</span> for the start of the code.</p>
+      </div>
+      <h2 id="changing-the-form-theme" class="toggler toggler-closed">Changing the form theme</h2>
+      <div>
+        <h3>How to style</h3>
+        <p>Quform comes with three themes; Dark and Dark rounded, Light and Light rounded, and Minimal Light and Dark. You can choose to style the form using a theme or you can start with the base styles and create your own styles in another stylesheet. </p>
+
+        <p>Probably the simplest method of making your form design is to copy an existing Quform theme, change the name and edit the styles and images within it. More details on this are given below. </p>
+
+        <h3>Adding / changing a theme</h3>
+        <p>Follow these steps to change the Quform theme to one of the four theme options available. I'm using Quform Light Rounded in this example:</p>
+
+        <p><strong>1:</strong> Add the stylesheet for the theme in the header. The theme CSS should be below the <code>base.css</code> link. Like this: </p>
+        <pre>
+        &lt;link rel="stylesheet" type="text/css" href="quform/css/base.css" /&gt;
+        &lt;link rel="stylesheet" type="text/css" href="quform/themes/<strong>light/rounded.css</strong>" /&gt;</pre>
+
+        <p>Here are the stylesheet links for the other available themes:</p>
+        <ul>
+
+        <li>Light -  quform/themes/<strong>light/light.css</strong></li>
+        <li>Light Rounded -  quform/themes/<strong>light/rounded.css</strong></li>
+        <li>Dark -  quform/themes/<strong>dark/dark.css</strong></li>
+        <li>Dark Rounded -  quform/themes/<strong>dark/rounded.css</strong></li>
+        <li>Minimal Light -  quform/themes/<strong>minimal/light.css</strong></li>
+        <li>Minimal Dark -  quform/themes/<strong>minimal/dark.css</strong></li>
+        </ul>
+
+        <p><strong>2:</strong> Add a class to <code>quform-outer</code> wrapper specifying the Theme class name.</p>
+        <p>Locate the div with class name <span class="find">quform-outer</span> – this is at the very start of the form HTML.
+        Change the existing quform-theme class to the class of the new theme e.g. <code>quform-theme-light-rounded</code> to use the Light Rounded theme. Like this:</p>
+
+        <pre>&lt;div class="quform-outer <strong>quform-theme-light-rounded</strong>"&gt;</pre>
+
+        <p>Here are the class names for the other available themes:</p>
+        <ul>
+        <li>Light -  <strong>quform-theme-light-light</strong></li>
+        <li>Light Rounded - <strong> quform-theme-light-rounded</strong></li>
+        <li>Dark -  <strong>quform-theme-dark-dark</strong></li>
+        <li>Dark Rounded -  <strong>quform-theme-dark-rounded</strong></li>
+        <li>Minimal Light -  <strong>quform-theme-minimal-light</strong></li>
+        <li>Minimal Dark -  <strong>quform-theme-minimal-dark</strong></li>
+        </ul>
+        <h3>Creating a new theme:</h3>
+        <p>You can either create a new theme by copying one of the existing theme folders and editing the CSS or use the Blank theme in <code>resources/themes/blank</code></p>
+
+        <p>In both cases you will need to do the following: </p>
+        <ul>
+        <li><strong>1:</strong> Change the name of the directory / folder name and add it to <code>quform/themes/</code> folder. </li>
+        <li><strong>2:</strong> Change the name of the CSS file(s) within the theme. </li>
+        <li><strong>3:</strong> Change the details in the comment at the top of the document with your new themes details. </li>
+        <li><strong>4:</strong> Change the main selector for all of the classes in the form. You can use find and replace (usually ctr+F) to do this. If you copied the light theme for example find <code>.quform-theme-light-light</code> and replace all with your new name. If you are starting with the Base theme find and replace all <code>.quform-theme-blank-new.</code></li>
+        </ul>
+        <p>You could replace this class with any name you like. However, we would recommend using the structure below especially if you would like to sell or share your new theme. Whatever this new class name is must be added to the <code>quform-outer</code> div as shown above in the Adding / changing a theme section.</p>
+<pre>
+.quform-theme-<strong>[Theme folder name]</strong>-<strong>[Theme CSS file name]</strong></pre>
+
+        <h3>Non-JavaScript layout</h3>
+        <p>We have minimally styled a page that non JavaScript users will see errors and the success message on using neutral colors.
+        If you want to change the style of this page edit the file <code>quform/nojs.php</code>. To see what the page
+        looks like, <a class="popup" href="http://www.google.co.uk/search?q=disable+JavaScript+in+your+browser">disable JavaScript in your browser</a> and submit the form.
+        </p>
+      </div>
+      <h2 class="toggler toggler-closed">Label options</h2>
+      <div>
+      <p>There are two label positioning options available with the current CSS, left labels and above labels (default). You can easily swap between them simply by adding a new class on the outer wrapper of any Element, a Group wrapper or the Form outer wrapper. The current CSS supports 3 levels of label position inheritance into nested Groups, if you need more please contact support.</p>
+
+      <h3>Changing the label position</h3>
+      <p>Here is an example of all three positions to add the label position class. The two class options are listed below.</p>
+
+      <h4>Labels set on the form outer wrapper. This will effect all elements in the form.</h4>
+<pre>
+&lt;!-- To copy the form HTML, start here --&gt;
+&lt;div class="quform-outer quform-theme-light-rounded <strong>quform-labels-left</strong>"&gt;</pre>
+
+      <h4>Labels set on the Group outer wrapper. This will effect all elements in the Group.</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap <strong>quform-labels-above</strong> quform-group-style-plain quform-group-alignment-left"&gt;</pre>
+
+      <h4>Labels set on the Element outer wrapper. This will effect only one element.</h4>
+<pre>
+&lt;!-- Begin Text input element --&gt;
+&lt;div class="quform-element <strong>quform-labels-left</strong> quform-element-text"&gt;</pre>
+
+      <p>Class names:</p>
+      <ul>
+      <li>Left labels: quform-labels-left</li>
+      <li>Above labels: quform-labels-above (default)</li>
+      </ul>
+
+      </div>
+      <h2 class="toggler toggler-closed">Changing layout using Groups</h2>
+      <div>
+      <p>Most complex layouts can be achieved using the Groups. For more advanced layouts you will need to modify your own CSS. Labels also have two options of being above or to the left of the input element.</p>
+
+        <h3>Adding a group and configuring:</h3>
+
+        <p>Here is an example of a Group HTML layout structure. This example has elements floating left in 2 columns and two rows, it also has a bordered style. The changeable classes have been highlighted.</p>
+
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap <strong>quform-group-style-bordered quform-group-alignment-left</strong>"&gt;
+    &lt;div class="quform-group-elements"&gt;
+
+        &lt;div class="quform-group-row <strong>quform-group-row-2cols</strong>"&gt;
+
+            &lt;!-- Begin Text input element --&gt;
+            &lt;div class="quform-element quform-element-text"&gt;
+            ...
+            &lt;/div&gt;
+            &lt;!-- End Text input element --&gt;
+
+            &lt;!-- Begin Text input element --&gt;
+            &lt;div class="quform-element quform-element-text"&gt;
+            ...
+            &lt;/div&gt;
+            &lt;!-- End Text input element --&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="quform-group-row <strong>quform-group-row-2cols</strong>"&gt;
+
+            &lt;!-- Begin Text input element --&gt;
+            &lt;div class="quform-element quform-element-text"&gt;
+            ...
+            &lt;/div&gt;
+            &lt;!-- End Text input element --&gt;
+
+            &lt;!-- Begin Text input element --&gt;
+            &lt;div class="quform-element quform-element-text"&gt;
+            ...
+            &lt;/div&gt;
+            &lt;!-- End Text input element --&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End 2 column Group --&gt;
+</pre>
+
+        <h3>Setting the group column alignment</h3>
+        <p>You can choose to either have the columns in your Group all using proportional space or you can choose to have the side by side using their true width.</p>
+
+        <p>Add the class <code>quform-group-alignment-proportional</code> or <code>quform-group-alignment-left</code> to the Group wrapper div which has the class name <code>quform-group-wrap</code>. Here is an example:</p>
+
+        <h4>Left aligned group elements:</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap quform-group-style-bordered <strong>quform-group-alignment-left</strong>"&gt;</pre>
+
+        <h4>Proportionally aligned group elements:</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap quform-group-style-bordered <strong>quform-group-alignment-proportional</strong>"&gt;</pre>
+
+        <h3>Plain groups and bordered group style</h3>
+        <p>You can choose to have a pre designed bordered box around your group or you can have the group plain – with no styles. </p>
+
+        <p>Add the class <code>quform-group-style-bordered</code> or <code>quform-group-style-plain</code> to the Group wrapper div which has the class name <code>quform-group-wrap</code>. Here is an example:</p>
+        <h4>Bordered group class:</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap <strong>quform-group-style-bordered</strong> quform-group-alignment-proportional"&gt;</pre>
+        <h4>Plain group class:</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap <strong>quform-group-style-plain</strong> quform-group-alignment-proportional"&gt;</pre>
+
+        <h3>Changing label position within a Group</h3>
+        <p>If you like you can choose to change the label style for all elements within a certain group. You can also change this for any nested Groups. </p>
+
+        <p>Add the class <code>quform-labels-above</code> or <code>quform-labels-left</code> to the Group wrapper div which has the class name <code>quform-group-wrap</code>. Here is an example: </p>
+        <h4>Labels above in Group</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap <strong>quform-labels-above</strong> quform-group-style-bordered quform-group-alignment-proportional"&gt;</pre>
+        <h4>Lables left in Group:</h4>
+<pre>
+&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap <strong>quform-labels-left</strong> quform-group-style-bordered quform-group-alignment-proportional"&gt;</pre>
+
+        <p>NB: You can override the labels within a group for a particular element by adding one of the same classes to the element wrapper (<code>quform-element</code>). Like this:
+<pre>&lt;div class="quform-element quform-element-text <strong>quform-labels-left</strong>"&gt;</pre>
+
+        <h3>Add a Group Title, Description or both. </h3>
+
+        <p>Add the following HTML directly under the div with class name <code>quform-group-elements</code>.</p>
+<pre>
+&lt;div class="quform-group-title-description-wrap"&gt;
+    &lt;div class="quform-group-title"&gt;Title&lt;/div&gt;
+    &lt;p class="quform-group-description"&gt;Description&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+        <p>Simply remove the line for Title or Description if it is not required for your Group.</p>
+
+        <h3>Creating columns </h3>
+        <p>You can create up to 5 columns with the existing CSS. To create columns you first need to decide how many you would like. For this example I will make a 3 column layout with 2 rows. </p>
+
+        <p>You need to locate (or create) a <code>quform-group-row wrapper</code> which you will apply a column number class on it, for example; <code>quform-group-row-2cols</code> (full list shown below).</p>
+
+<pre>&lt;!-- Begin 3 column Group --&gt;
+&lt;div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-left"&gt;
+    &lt;div class="quform-group-elements"&gt;
+
+        &lt;div class="quform-group-row <strong>quform-group-row-3cols</strong>"&gt;
+
+            &lt;!--Add <strong>three</strong> elements here--&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="quform-group-row <strong>quform-group-row-3cols</strong>"&gt;
+
+            &lt;!--Add <strong>three</strong> elements here--&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End 3 column Group --&gt;</pre>
+
+        <p>NB: Add the same number of form elements as columns to ensure the code works correctly.</p>
+
+        <h4>List of column classes:</h4>
+
+        <ul>
+        <li>quform-group-row-<strong>1</strong>cols</li>
+        <li>quform-group-row-<strong>2</strong>cols</li>
+        <li>quform-group-row-<strong>3</strong>cols</li>
+        <li>quform-group-row-<strong>4</strong>cols</li>
+        <li>quform-group-row-<strong>5</strong>cols</li>
+        </ul>
+
+        <h3>Nested Groups</h3>
+
+        <p>You can add Groups inside Groups simply by adding the new group HTML inside the <code>quform-group-row</code>, just like you would an element.</p>
+
+        <p>Here is an example of a two column Group with another two column Group nested in the 2nd column.</p>
+
+<pre>&lt;!-- Begin 2 column Group --&gt;
+&lt;div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional"&gt;
+    &lt;div class="quform-group-elements"&gt;
+
+        &lt;div class="quform-group-row quform-group-row-2cols"&gt;
+
+            &lt;!-- Begin Text input element --&gt;
+            &lt;div class="quform-element quform-element-text"&gt;
+            ...
+            &lt;/div&gt;
+            &lt;!-- End Text input element --&gt;
+
+            &lt;!-- Nested Group --&gt;
+            &lt;div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional"&gt;
+                &lt;div class="quform-group-elements"&gt;
+
+                    &lt;div class="quform-group-row quform-group-row-2cols"&gt;
+
+                        &lt;!-- Begin Text input element --&gt;
+                        &lt;div class="quform-element quform-element-text"&gt;
+                        ...
+                        &lt;/div&gt;
+                        &lt;!-- End Text input element --&gt;
+
+                        &lt;!-- Begin Text input element --&gt;
+                        &lt;div class="quform-element quform-element-text"&gt;
+                        ...
+                        &lt;/div&gt;
+                        &lt;!-- End Text input element --&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Nested Group --&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End 2 column Group --&gt;</pre>
+
+      </div>
+      <h2 class="toggler toggler-closed">Changing the tooltips</h2>
+      <div>
+        <p>The form tooltips are created using the <a href="https://atomiks.github.io/tippyjs/" class="popup">Tippy.js</a>. See the sections
+        below on changing the tooltips.</p>
+        <h3>Changing the text of a tooltip</h3>
+        <p>The tooltips become active when the form element has the class <strong>quform-tooltip</strong> and it uses the
+        content of the <code>data-tippy-content=""</code> attribute of the form element.  If you want to change the text of a
+        tooltip, locate the form element in the HTML and change the <code>data-tippy-content=""</code> attribute to the text you want to
+        display.</p>
+        <h3>Adding or removing a tooltip</h3>
+        <p>The tooltips become active when the form element has the class <strong>quform-tooltip</strong> and it uses the
+        content of the <code>data-tippy-content=""</code> attribute of the form element.  If you want to show
+        a tooltip on an element that doesn't have one already, add the class <strong>quform-tooltip</strong> to
+        the form element and add a <code>data-tippy-content=""</code> attribute containing the text you
+        want to display in the tooltip.</p>
+        <p>To remove a tooltip from an element that already has one, remove the class <strong>quform-tooltip</strong> from the form element and remove the <code>data-tippy-content=""</code> attribute.</p>
+        <h3>Changing the look of the tooltips</h3>
+        <p>You can change the CSS styles of the tooltip, this is found at the in the base stylesheet (base.css), search for <span class="find">.tippy-box[data-theme~="quform"]</span> and add any desired CSS styles there.</p>
+        <h3>Using a Help icon for the tooltip</h3>
+        <p>There is an option to use a Help icon as the tooltip trigger. All you need to do is add the following HTML inside the <code>label</code>.
+        The icon will change depending on the theme you are using and can be found in the theme image folder, <span class="find">quform/theme/[theme]/images/</span>. If no theme is used it will be set to the default image found in the <span class="find">quform/images/</span>.</p>
+        <pre>
+&lt;label for="first_name">First name &lt;span class="quform-required"&gt;*&lt;/span&gt;
+<strong>&lt;span class="quform-tooltip-icon quform-tooltip" data-tippy-content="Tooltip text here"&gt;</strong>&lt;/span&gt;&lt;/label&gt;
+        </pre>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the success message</h2>
+      <div>
+        <p>The success message is the message that is displayed to the user when the form has been successfully
+        submitted.  To change it open <code>process.php</code> and search for the term <span class="find">$config['successMessage']</span>,
+        it's right at the top of the file.
+        Change the success message to suit, you can add or remove as much HTML or text as you want there.
+        Since the string is enclosed in single quotes <code>'</code>, if
+        you want to include a single quote in your text or HTML you will need to escape it, by adding a
+        backslash before it e.g. <code>\'</code></p>
+        <h3>Using form submitted data in the success message</h3>
+        <p>You can also put submitted form data into the success message, such as the persons name.
+        To do that just include the unique element name surrounded by percentage signs. For example
+        to have a message containing the person's name:</p>
+        <pre>$config['successMessage'] = 'Thank you for your message, %name%.';</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Changing / adding notification email recipients</h2>
+      <div>
+        <p>Email recipients are the list of email addresses who will be sent the data of the form when
+        it is submitted by the user.  Some people may want this to go to multiple people so we have added
+        the facility to do that.  To add or change the recipients, open <code>process.php</code> and search
+        for the code below.</p>
+        <pre>$config['recipients'] = '';</pre>
+        <p>You will find the array of current recipients.  If you just want the email
+        to go to one email address, then just enter your email address inside the single quotes.
+        </p>
+        <h3>Single recipient</h3>
+        <pre>$config['recipients'] = 'me@example.com';</pre>
+        <h3>Multiple recipients</h3>
+        <pre>$config['recipients'] = array(
+    'me@example.com',
+    'you@example.com',
+    'another@example.com'
+);</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Setting the "From" address</h2>
+      <div>
+        <p>Open <code>process.php</code> and search for the term <span class="find">$config['from'] = '';</span> and enter an email address inside the quotes.</p>
+        <pre>$config['from'] = 'company@example.com';</pre>
+        <h3>Setting a name with your "From" address</h3>
+        <p>You can also set a name to be sent with the address using the code below.</p>
+        <pre>$config['from'] = array('company@example.com' =&gt; 'Company');</pre>
+        <h3>Setting the "From" address to the submitted email address</h3>
+        <p>You can also set the from address to a submitted email address. To do that set it to be the unique element name surrounded by percent signs, e.g.</p>
+        <pre>$config['from'] = '%email%';</pre>
+        <h3>Setting the "From" address to the submitted email address and name</h3>
+        <p>You can also set the from address to a submitted email address and name combination. To do that, set it to be
+        an array with the email unique element name surrounded by percent signs as the key and the name unique element name
+        surrounded by percent signs as the array value, e.g.</p>
+        <pre>$config['from'] = array('%email%' =&gt; '%name%');</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Different notification email recipients based on chosen subject</h2>
+      <div>
+        <p>You might want to change the recipients of the email based on the subject chosen by the form user.  To do this you will need to change the recipients array
+        depending on which subject was chosen.  The code below shows an example of how you would do this and this code will replace the existing
+        code that sets the notification recipients in <code>process.php</code>. The string after <code>case</code> should match the <code>value</code> attribute of the option in the HTML of the form.</p>
+        <h3>Different recipients per subject</h3>
+        <pre>switch($_POST['subject']) {
+    case 'General enquiry':
+        $config['recipients'] = array(
+            'email1@example.com',
+            'email2@example.com',
+            'email3@example.com'
+        );
+        break;
+    case 'Sales enquiry':
+        $config['recipients'] = array(
+            'email4@example.com',
+            'email5@example.com',
+            'email6@example.com'
+        );
+        break;
+    case 'Support enquiry':
+        $config['recipients'] = array(
+            'email7@example.com',
+            'email8@example.com',
+            'email9@example.com'
+        );
+        break;
+    default:
+        // These will be the recipients if the subject does not match any above
+        $config['recipients'] = array(
+            'email1@example.com',
+            'email4@example.com',
+            'email7@example.com'
+        );
+        break;
+}</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the notification email subject</h2>
+      <div>
+        <p>You can change the email subject to something that is more relevant to your form.  To do this, open <code>quform/process.php</code>
+        and search for the term <span class="find">$config['subject']</span>.  Change the text inside the quotes to the subject you want.  You can use placeholder values inside % signs to have the
+        value replaced by the form value of that name, such as in the default subject <code>%name%</code> will be replaced by the submitted value of the "name" field.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the label of an element in the email</h2>
+      <div>
+        <p>The element's label is shown in two places:</p>
+        <ul>
+            <li>The error page for non-JavaScript users (nojs.php)</li>
+            <li>The notification email</li>
+        </ul>
+        <p>To change the label of the element, locate the line of code that creates the element in
+        <code>process.php</code>. The second string of text you specify when creating the element
+        is the label.</p>
+        <p>If you wanted to change the type_the_word element to say Security code in the non-JavaScript page for example, then do this:</p>
+        <pre>$captcha = new Quform_Element('type_the_word', <strong>'Security code'</strong>);</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the animated loading gif</h2>
+      <div>
+        <p>The animated loading gif is located at <code>quform/images/default-loading.gif</code>. Replace that image with your own. If the image doesn't change for you do a force reload in the browser by pressing Ctrl+F5.</p>
+        <p>You might also want to adjust the CSS for the new image, you can do so in the <code>quform/css/base.css</code> file, at these selectors:</p>
+        <pre>.quform-loading-wrap {
+.quform-loading-wrap .quform-loading {</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the CAPTCHA image</h2>
+      <div>
+        <p>It is possible that the captcha (Type the word) image that is included with the form does
+        not match your design and you can change it quite simply.</p>
+
+        <p>We have created 8 CAPTCHA image styles that you can use by simply changing the image in the HTML. Here is a list of the image names:</p>
+
+        <ul>
+        <li>ar-carter-dark.png</li>
+        <li>ar-carter-light.png</li>
+        <li>courier-new-dark.png</li>
+        <li>courier-new-light.png</li>
+        <li>crime-scene-dark.png</li>
+        <li>crime-scene-light.png</li>
+        <li>dripping-marker-dark.png</li>
+        <li>dripping-marker-light.png</li>
+        </ul>
+
+        <p>In the Resources folder you will see a PSD (Photoshop) file so you can modify any one of our captcha images to suit your site.</p>
+        <ul>
+            <li>1.  Replace the file <code>quform/images/courier-new-light.png</code> with your new image</li>
+            <li>2.  You can choose any word you want for the image, if you change it from the default, you will need to
+            change the <code>process.php</code> file to change the token of the captcha validator
+            to match the word contained in your new image. See below for more information.</li>
+        </ul>
+        <p>In <code>process.php</code> locate the configuration for the CAPTCHA field by searching
+        for the term <span class="find">$captcha</span>, you will see the code below.</p>
+        <pre>$captcha-&gt;addValidator('identical', array('token' =&gt; 'catch'));</pre>
+        <p>Change the text <strong>catch</strong> to match the word or letters that are in your new CAPTCHA image.</p>
+        <p>NOTE: The CAPTCHA system is very simple and will prevent random form submissions by bots roaming around
+        the internet (which happens a lot). It will not prevent targeted attacks however, but the chances of
+        that happening are small and most other CAPTCHAs are not safe against targeted attacks either. We believe
+        that an easy, simple CAPTCHA is a good trade off between the spam,
+        usability and browser compatibility of the form. Since at the end of the day you don't want to miss
+        messages for new business by users being put off or unable to pass a complex CAPTCHA challenge.
+        If you do need a more complex CAPTCHA field, see the sections below "Using reCAPTCHA" and "Using
+        a custom CAPTCHA".</p>
+      </div>
+      <h2 class="toggler toggler-closed">Redirecting to another page after the form is submitted</h2>
+      <div>
+       <p>Open <code>quform/process.php</code> and search for the term <span class="find">$config['redirect']</span>.
+       You can set this variable to the URL you would like to redirect to:</p>
+       <pre>$config['redirect'] = 'http://www.example.com/your_thanks_page.html';</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Quform in a popup (lightbox)</h2>
+      <div>
+        <p>You can make the form appear in a popup lightbox by following these instructions. We will use the <a class="popup" href="http://colorpowered.com/colorbox/">Colorbox jQuery plugin</a> as our
+        lightbox script. There are 6 steps.</p>
+        <ul>
+            <li>1. Download and extract the Colorbox files</li>
+            <li>2. Add the link to the Colorbox CSS file</li>
+            <li>3. Add the link to the Colorbox JS file</li>
+            <li>4. Hide the Quform in the HTML</li>
+            <li>5. Set up your trigger element</li>
+            <li>6. Add the JavaScript to show the Quform when the trigger is clicked</li>
+        </ul>
+        <p>Each step is explained in more detail below.</p>
+        <h3>1. Download and extract the Colorbox files</h3>
+        <p>For the rest of this example, I am assuming that you have copied the root <code>colorbox</code> folder from the zip file to inside the <code>quform/js</code> folder.</p>
+        <h3>2. Add the link to the Colorbox CSS file</h3>
+        <p>Add a link to the CSS file in the head of your page e.g.</p>
+        <pre>&lt;link rel="stylesheet" type="text/css" href="quform/js/colorbox/example1/colorbox.css" /&gt;</pre>
+        <p>Note: this example uses the "example1" Colorbox theme, if you choose another theme just replace example1 in the path with the theme that you have chosen.</p>
+        <h3>3. Add the link to the Colorbox JS file</h3>
+        <p>Then add a link to the <code>jquery.colorbox-min.js</code> file, put this on the line before the link to
+        scripts.js file (but after the link to the jQuery library) in the head of the page e.g.</p>
+        <pre>&lt;script type="text/javascript" src="quform/js/colorbox/jquery.colorbox-min.js"&gt;&lt;/script&gt;</pre>
+        <h3>4. Hide the Quform in the HTML</h3>
+        <p>With your Quform HTML already in your page, wrap the entire Quform HTML in a <code>div</code> with the style <code>display: none;</code> e.g.</p>
+        <pre>&lt;div style="display: none;"&gt;
+    // Your Quform HTML
+&lt;/div&gt;</pre>
+        <h3>5. Set up your trigger element</h3>
+        <p>Add your link that will trigger the form to be displayed, put this anywhere on your page outside the div you added above, e.g.</p>
+        <pre>&lt;a href="#" id="show-quform"&gt;Contact us&lt;/a&gt;</pre>
+        <h3>6. Add the JavaScript to show the Quform when the trigger is clicked</h3>
+        <p>Add this code to <code>js/scripts.js</code> inside the document.ready() function (on line 4 for example):</p>
+        <pre>$("#show-quform").colorbox({
+    inline: true,
+    href: '.quform-outer'
+});</pre>
+        <h3>Additional options</h3>
+        <p>You can pass in any other Colorbox options in the code in step 6 above, you may want to set a fixed height and width of the popup
+        so that when the form errors show the scroll bars do not appear:</p>
+        <pre>$("#show-quform").colorbox({
+    inline: true,
+    href: '.quform-outer',
+    height: 850,
+    width: 400
+});</pre>
+        <p>For more options see the <a href="http://colorpowered.com/colorbox/" class="popup">Colorbox documentation</a>.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Confirm email field</h2>
+      <div>
+       <p>To add a confirmation email field, create a new form element in the HTML by copying the HTML in the box below and paste it into your form.</p>
+
+<pre>&lt;!-- Begin Text input element - Email confirm --&gt;
+&lt;div class="quform-element quform-element-text"&gt;
+    &lt;div class="quform-spacer"&gt;
+        &lt;label for="email_confirm"&gt;Confirm Email &lt;span class="quform-required"&gt;*&lt;/span&gt;&lt;/label&gt;
+        &lt;div class="quform-input"&gt;
+            &lt;input id="email_confirm" type="text" name="email_confirm" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Text input element - Email confirm --&gt;</pre>
+		<p>Add the following code to your <code>process.php</code> file, at the element configuration section.</p>
+       <pre>$emailConfirm = new Quform_Element('email_confirm', 'Confirm email address');
+$emailConfirm-&gt;addValidator('required');
+$emailConfirm-&gt;addValidator('emailConfirm', array(
+    'messages' =&gt; array('not_match' =&gt; 'The email addresses do not match')
+));
+$emailConfirm-&gt;setIsHidden(true);
+$form-&gt;addElement($emailConfirm);</pre>
+	<p>If you'd like, you can change the error message by changing the text 'The email addresses do not match'.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Displaying a global form error</h2>
+      <div>
+       <p>If you want to display an error message above the form when there are errors, open the <code>process.php</code> file
+       and search for the term <span class="find">// Form data failed validation</span>. Make a new line immediately after this line
+       and add the following code.</p>
+       <pre>$form-&gt;setError('There is an error with the submitted form. Please correct any errors below.');</pre>
+       <p>Customize the message to suit, you can enter HTML so you are able to style your message to suit using CSS.</p>
+      </div>
+      <h1>Advanced form customisation<a id="three" class="top-link" href="#toc">Top</a></h1>
+      <h2 class="toggler toggler-closed">Multiple forms</h2>
+      <div>
+       <p>You may want to have more than one form on the same site but with different fields.  Such as
+       a register form and a contact form.  To do that, set up the first form as instructed in the
+       installation guide at the start of this document.  To make the second form, copy the HTML for
+       the Quform again into the body of the page that you want your second form on and customise your new
+       form as described in the <a href="#two">Customising your form</a> section above. Then make a copy of the
+       <code>quform/process.php</code> file and call it something else, for example <code>quform/process-register.php</code>.
+       That file you should customise with the fields for your register form as described in the <a href="#two">Customising your form</a> section above.  You should then
+       change the <code>action</code> attribute of your register form so that it now points to your
+       new file e.g. <code>&lt;form class="quform" action="quform/process-register.php" ...</code>.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Multiple forms on the same page</h2>
+      <div>
+       <p>To have more than one Quform on the same page, just copy the HTML for the Quform again and paste it into another area of your page. You will then need
+       to create a new config file and change the form <code>action</code> attribute as described in the section <strong>Multiple forms</strong> above. There is only
+       one issue and that is that the form elements in the Quform have an <code>id=""</code> attribute, so when you have more than one element with the same id on
+       a page, it is no longer valid HTML, however the form will still work. If you want your page to pass W3C validation then you should change or remove the id
+       attributes for the elements in the second form or change the name of the elements with the same id to something else.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Email settings</h2>
+      <div>
+       <p>The emails sent out by the system are sent by the PHPMailer script, which allows you to do pretty
+       much anything you need to do with sending emails in PHP.</p>
+       <p>The PHP code for the configuration and sending of emails is in <strong>process.php</strong> and you can find the start of it by
+       searching for the term <span class="find">$mailer</span>.
+       If you need to make a change to these settings you can do it there, most of the code
+       is commented to help you make changes. You should also check out this
+       <a href="http://code.google.com/a/apache-extras.org/p/phpmailer/wiki/UsefulTutorial" class="popup">PHPMailer tutorial</a> to help you
+       customise the settings.</p>
+       <p>The email is sent using PHP's <code>mail()</code> function by default, if your host does not
+       support this, you can change it to use a SMTP server instead.  See the section further down
+       called <a href="#sending-emails-via-an-smtp-server">Sending emails via an SMTP server</a> for how to do this.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Customising the email</h2>
+      <div>
+       <p>The email body is formatted in HTML, you can customise the email body to suit your needs.  Edit the file <code>quform/emails/notification.php</code>,
+        to customise it. We recommend using tables and inline CSS for maximum compatibility.  Check out <a href="http://www.sitepoint.com/how-to-code-html-email-newsletters/" class="popup">this page</a>
+        for help.
+       </p>
+      </div>
+      <h2 class="toggler toggler-closed">Accessing submitted form data from inside the emails</h2>
+      <div>
+       <p>You have access to the form object in the email <code>$form</code> and therefore you can access submitted form data by using the code below. The
+       string you pass in to <code>getValue()</code> should be the name of the element that you specified in the process.php file and the name attribute in the form HTML. The code
+       below will display the submitted email address. You can use this code in both notification
+       email and the autoreply email.</p>
+       <pre>&lt;?php echo $form-&gt;getValue('email'); ?&gt;</pre>
+       <h3>Display submitted form data formatted in HTML</h3>
+       <p>The above code will return the raw value of the form element, which can sometimes be an array (for multi-checkbox elements for example). If you
+       use the method <code>getValueHtml()</code> instead, it will guarantee that the value will be displayed properly in the HTML email.
+       This method takes two arguments, the first argument is the unique element name, the second argument (optional) is the string separator that will be used to join array types, this defaults to <code>'&lt;br /&gt;'</code>.
+       Use the code below to safely display a submitted value in the HTML email file.</p>
+       <pre>&lt;?php echo $form-&gt;getValueHtml('unique_element_name'); ?&gt;</pre>
+       <p>Note: just replace <code>unique_element_name</code> with the name of the element you specified in process.php to get any submitted form value.  The returned
+       data is filtered according to any filters you added in process.php.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Sending the form user an autoreply email</h2>
+      <div>
+       <p>You may want to send the form user an email to let them know that their enquiry was sent successfully.  To do this you will need
+       to open the file <code>quform/process.php</code> and search for the term <span class="find">$config['autoreply']</span>.
+       Set this variable to <code>true</code>.</p>
+       <p>If you look on the lines below this, you'll see the code that sets the subject
+       of the autoreply as well as the names of the files that contain the content of the email.
+       The subject can contain placeholder variables, which is your form element unique name surrounded by <code>%</code> signs.  The submitted value of the form element with that name will be used in its place.
+       With the default settings the autoreply will contain the content found in the file <code>quform/emails/autoreply.php</code>. You
+       can simply edit this file to change the content of the autoreply email. If you need to access
+       a submitted form value from inside the email, see the section above called "Accessing submitted form data from inside the emails".</p>
+       <h3>Different autoreply emails per form</h3>
+       <p>If you want another form to have another autoreply, you should make a copy of <code>autoreply.php</code>
+       and name it something different then customise the content.  Then in the <code>process.php</code> file for your new form, use the new filename instead for the
+       variable <code>$config['autoreplyBody']</code>. For example if you have named the autoreply file for your second form <code>autoreply-register.php</code></p>
+       <pre>$config['autoreplyBody'] = '/emails/autoreply-register.php';</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Customising the autoreply email</h2>
+      <div>
+       <p>To customise the autoreply email you will need to edit the file <code>quform/emails/autoreply.php</code>.</p>
+       <p>You can use HTML tags in this file such as <code>&lt;br /&gt;</code> for a new line.</p>
+      </div>
+      <h2 class="toggler toggler-closed">How to add the user's IP address to the email</h2>
+      <div>
+          <p>If you search in process.php for <span class="find">$config['extra']</span>, you will find an example of the code that adds the user's IP address to the notification email.</p>
+          <pre>$config['extra']['IP address'] = Quform::getIPAddress();</pre>
+          <p>Copy this line and paste it into the empty line above the <code>/** END FORM SETTINGS **/</code> comment.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Adding extra data to the notification email</h2>
+      <div>
+          <p>If you search in process.php for <span class="find">$config['extra']</span>, you will find some examples of code you can use to add extra data to the notification email.
+              You can add any other data you wish by adding more entries to this <code>$config['extra']</code> array. The label will be the array key and the displayed value will be
+              the array value. For example, to show the user's IP address you can use this code:</p>
+          <pre>$config['extra']['IP address'] = Quform::getIPAddress();</pre>
+          <p>To show the time and date the form was submitted, add this code:</p>
+          <pre>$config['extra']['Date'] = date('g:ia jS F Y');</pre>
+          <p>To show the page that the form was submitted from, you can use this code:</p>
+          <pre>$config['extra']['Form URL'] = Quform::getReferer();</pre>
+      </div>
+      <h2 id="sending-emails-via-an-smtp-server" class="toggler toggler-closed">Sending emails via an SMTP server</h2>
+      <div>
+        <h2>Configuring SMTP</h2>
+        <p>To use an SMTP server to send the emails you will need to enter your SMTP server connection information in <span class="file">process.php</span>, search for the term <code><span class="path">$config['smtp']</span></code>. You will see an array, fill out the corresponding empty quotes on the right hand side of the array with your connection details. For example, to send mail via Gmail it may look something like this.</p>
+        <pre>$config['smtp'] = array(
+    'host' =&gt; 'smtp.gmail.com',
+    'port' =&gt; 465,
+    'username' =&gt; 'your-username@gmail.com',
+    'password' =&gt; 'your-password',
+    'encryption' =&gt; 'ssl'
+);</pre>
+
+        <h2>Reliable SMTP servers</h2>
+        <p>There are some premium and free SMTP services available which are probably more reliable than your own mail server and have a higher delivery success.</p>
+
+        <h3>SparkPost</h3>
+        <h4>Free (up to 100,000 emails per month)</h4>
+        <p>SparkPost have a free SMTP service that allow you to send 100,000 emails per month for free (10,000 per day). The service also has a Dashboard where you can track each sent email. Visit <a href="https://www.sparkpost.com/" target="_blank">https://www.sparkpost.com</a> to sign up.</p>
+        <h3>Mailjet</h3>
+        <h4>Free (up to 6,000 emails per month)</h4>
+        <p>Mailjet have a free SMTP service that allow you to send 6,000 emails per month for free (200 per day). The service also has a Dashboard where you can track each sent email. Visit <a href="https://www.mailjet.com/" target="_blank">https://www.mailjet.com</a> to sign up and see <a href="https://www.mailjet.com/support/how-can-i-configure-my-smtp-parameters,2.htm" target="_blank">this page for how to get the SMTP settings</a>.</p>
+
+        <h3>Gmail</h3>
+        <h4>Free</h4>
+        <p>You can use the free Gmail SMTP service to send emails, example settings are above.</p>
+
+        <h2>Troubleshooting the SMTP connection</h2>
+        <p>If you have configured the SMTP connection and you are still not receiving emails, or you are now getting an error when submitting the form, open the file <span class="file">quform/smtp-check.php</span> (or <a href="https://gist.github.com/ThemeCatcher/9132553" target="_blank">download it from here</a> if the file is not there) and follow the instructions at the top of the file, this file will give a detailed debugging output to help you identify the cause of the problem.</p>
+
+        <h3>Using SMTP on a local server (WAMP, XAMPP etc.)</h3>
+        <p>If you are developing your site locally with a web server package such as XAMPP, you will need to enable OpenSSL in PHP to connect to SMTP servers which use TLS or SSL. See <a href="http://stackoverflow.com/a/11040496/1915260" target="_blank">this page</a> to find out how.</p>
+      </div>
+
+      <h2 class="toggler toggler-closed">Sending a plain text email</h2>
+      <div>
+        <p>By default the email that is sent is in HTML format. To change this to send a plain text email, edit <code>process.php</code> and search for the term
+        <span class="find">// Set the email body</span> and you will find these lines:</p>
+          <pre>// Set the email body
+ob_start();
+include QUFORM_ROOT . $config['emailBody'];
+$mailer-&gt;msgHTML(ob_get_clean());
+$mailer-&gt;AltBody = 'To view this email please use HTML compatible email software.';</pre>
+          <p>Change this code to the the following code:</p>
+          <pre>// Set the email body
+ob_start();
+include QUFORM_ROOT . '/emails/notification-plain.php';
+$mailer-&gt;Body = ob_get_clean();</pre>
+          <p>The email will now be sent in plain text using the content in the file <span class="file">/emails/notification-plain.php</span>. You can edit that
+          file if you want to make any modifications.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Saving form data to a MySQL database</h2>
+      <div>
+       <p>Quform includes code to save form data to a MySQL database. To use this feature, open <code>process.php</code> and search for the term
+       <span class="find">$config['database']</span> and change it to <code>true</code>. Then search for the term <span class="find">MySQL</span> and you should
+       end up above the block of code that does the saving to the database, you'll need to change a few settings here to get it working.</p>
+       <h3>Step 1 - Set connection details</h3>
+       <p>Change the line that connects to MySQL with your correct host, username, password and database.</p>
+       <pre>$db = new mysqli('localhost', '<strong>username</strong>', '<strong>password</strong>', '<strong>database</strong>');</pre>
+       <h3>Step 2 - Set the database table</h3>
+       <p>On the line below that you should change the table name to match your table name.</p>
+       <pre>$table = '<strong>table</strong>';</pre>
+       <h3>Step 3 - Configure the data to save</h3>
+       <p>Finally, configure the $data array to set which fields you want to save into what column. The left hand side of the array is the column name and the right hand side is the value to save.
+       You can add new fields or remove fields to suit your needs, just duplicate a line inside the array and change the values to save to a new column.</p>
+       <pre>$data = array(
+    'name' =&gt; $form-&gt;getValue('name'),
+    'email' =&gt; $form-&gt;getValue('email'),
+    'message' =&gt; $form-&gt;getValue('message'),
+);</pre>
+       <p>The data in this array is escaped using <code>$db-&gt;real_escape_string()</code> before insertion
+        to prevent SQL Injection attacks.</p>
+       <h3>Accessing form data</h3>
+       <p>Some types of fields such as Date and Multiple Checkbox return an array and will need additional processing before they can be inserted into the database, see the section below named <a href="#getting-form-values">Getting form values &amp; data types</a> and the Tips section below for more information.</p>
+       <h3>Tips</h3>
+       <h4>Insert Date element value to DATETIME column</h4>
+       <p>Before the $data array, add this line, if the element unique name is not 'date', change the highlighted part:</p>
+       <pre>$date = $form-&gt;getValue('<strong>date</strong>');</pre>
+       <p>Add the hightlighted line below to the $data array, if the column name is not 'date' change that part.</p>
+       <pre>$data = array(
+    'name' =&gt; $form-&gt;getValue('name'),
+    'email' =&gt; $form-&gt;getValue('email'),
+    'message' =&gt; $form-&gt;getValue('message'),
+    <strong>'date' =&gt; $date['year'] . '-' . $date['month'] . '-' . $date['day'],</strong>
+);</pre>
+       <h4>Insert Multiple Checkbox element value</h4>
+       <p>Add the hightlighted line below to the $data array, if the column name and element unique name are  not 'multi_checkbox' change those parts. The values will be converted to a comma separated string.</p>
+       <pre>$data = array(
+    'name' =&gt; $form-&gt;getValue('name'),
+    'email' =&gt; $form-&gt;getValue('email'),
+    'message' =&gt; $form-&gt;getValue('message'),
+    <strong>'multi_checkbox' =&gt; $form-&gt;getValuePlain('multi_checkbox'),</strong>
+);</pre>
+        <h4>Insert a File Upload URL</h4>
+        <p>Before the $data array, add this line, if the element unique name is not 'upload', change the highlighted part:</p>
+       <pre>$upload = $form-&gt;getValue('<strong>upload</strong>');
+$uploadUrl = isset($upload[0]['url']) ? $upload[0]['url'] : '';</pre>
+       <p>Add the hightlighted line below to the $data array, if the column name is not 'upload_url' change that part.</p>
+       <pre>$data = array(
+    'name' =&gt; $form-&gt;getValue('name'),
+    'email' =&gt; $form-&gt;getValue('email'),
+    'message' =&gt; $form-&gt;getValue('message'),
+    <strong>'upload_url' =&gt; $uploadUrl,</strong>
+);</pre>
+
+        <h4>Using a MySQL function as one of the column values</h4>
+        <p>Change the query line to add your column name and function after the $columns and $values variables respectively e.g.</p>
+        <pre>$query = "INSERT INTO `$table` ($columns<strong>, created_at</strong>) VALUES ('$values'<strong>, NOW()</strong>)";</pre>
+      </div>
+      <h2 id="getting-form-values" class="toggler toggler-closed">Getting form values &amp; data types</h2>
+      <div>
+        <p>This section shows you how to access the form values in the PHP code and can be
+        used in the email content files, database query, Custom code sections #1 &amp; #2 and
+        anywhere else inside the process() function of process.php.</p>
+        <h2>Get a single form value</h2>
+        <p>Use the code below to get a single form value, replace unique_element_name with the unique name of the form element.</p>
+        <pre>$value = $form-&gt;getValue('<strong>unique_element_name</strong>');</pre>
+        <p><code>$value</code> now contains the submitted form value for element <code>unique_element_name</code></p>
+        <p>Note: some types of element will return an array and not a string that can be displayed or used
+        without further processing. See the Data types section below for the return types for different
+        elements.</p>
+        <h2>Get a single form value (formatted as Plain text)</h2>
+        <p>Using this code guarantees that the returned value will be a string. Use the code below to get a single form value, replace unique_element_name with the unique name of the form element.</p>
+        <pre>$value = $form-&gt;getValuePlain('<strong>unique_element_name</strong>');</pre>
+        <p><code>$value</code> now contains the submitted form value for element <code>unique_element_name</code> formatted as
+        plain text, this means:</p>
+        <ul>
+          <li>Any string types will stay remain the same</li>
+          <li>Any array types will be formatted as a comma separated string. To use a different separator, pass it a second argument e.g. <code>$form-&gt;getValuePlain('my_element', ': ');</code></li>
+          <li>For the Date and Time elements the value will be formatted according to the configured Date/Time formats</li>
+          <li>The value of a File Upload element value will be formatted as the file name and size with a URL
+          after it if the file was saved to the server.</li>
+        </ul>
+        <h2>Get a single form value (formatted as HTML)</h2>
+        <p>Using this code guarantees that the returned value will be a string in HTML format. Use the code below to get a single form value, replace unique_element_name with the unique name of the form element.</p>
+        <pre>$value = $form-&gt;getValueHtml('<strong>unique_element_name</strong>');</pre>
+        <p><code>$value</code> now contains the submitted form value for element <code>unique_element_name</code> formatted as
+        HTML, this means:</p>
+        <ul>
+          <li>Any string types will stay remain the same, but will be escaped using <a href="http://php.net/htmlspecialchars" target="_blank">htmlspecialchars</a></li>
+          <li>Any array types will be escaped using <a href="http://php.net/htmlspecialchars" target="_blank">htmlspecialchars</a> and formatted as separated by the &lt;br&gt; tag. To use a different separator, pass it a second argument e.g. <code>$form-&gt;getValueHtml('my_element', ', ');</code></li>
+          <li>For the Date and Time elements the value will be formatted according to the configured Date/Time formats</li>
+          <li>The value of a File Upload element value will be formatted as the file name and size. If the file was saved
+          to the server it will link to the file.</li>
+        </ul>
+        <h2>Get all form values</h2>
+        <p>To get all form values use the code below.</p>
+        <pre>$values = $form-&gt;getValues();</pre>
+        <p><code>$values</code> now contains all the submitted form values in an associative array. The element unique name is the array key and the submitted value is the array value. Below is an example of the contents of <code>$values</code> after a form has been submitted.</p>
+        <pre>array(
+    'name' =&gt; 'My Name',
+    'email' =&gt; 'me@example.com',
+    'message' =&gt; 'Hello there.'
+)</pre>
+        <h2>Data types of the form values</h2>
+        <table class="options">
+            <tr><th style="width: 40%;">Element</th><th>Type</th><th>Example</th></tr>
+            <tr><td><strong>Single Line Text</strong><br>&lt;input type="text"&gt;</td><td>string</td><td>'Foo'</td></tr>
+            <tr><td><strong>Paragraph Text</strong><br>&lt;textarea&gt;</td><td>string</td><td>'Foo'</td></tr>
+            <tr><td><strong>Email Address</strong><br>&lt;input type="email"&gt;</td><td>string</td><td>'email@example.com'</td></tr>
+            <tr><td><strong>Select Menu</strong><br>&lt;select&gt;<br></td><td>string</td><td>'Option 1'</td></tr>
+            <tr><td><strong>Multi Select Menu</strong><br>&lt;select multiple name="foo[]"&gt;<br></td><td>array</td><td><pre>array(
+    0 => 'Option 1',
+    1 => 'Option 2'
+)</pre></td></tr>
+            <tr><td><strong>Single Checkbox</strong><br>&lt;input type="checkbox" name="foo"&gt;</td><td>string</td><td>'Option 1'</td></tr>
+            <tr><td><strong>Multi Checkbox</strong><br>&lt;input type="checkbox" name="foo[]"&gt;</td><td>array</td><td><pre>array(
+    0 => 'Option 1',
+    1 => 'Option 2'
+)</pre></td></tr>
+            <tr><td><strong>Radio Buttons</strong><br>&lt;input type="radio"&gt;</td><td>string</td><td>'Option 1'</td></tr>
+            <tr><td><strong>File Upload</strong><br>Quform_Element_File<br>&lt;input type="file"&gt;</td><td>array</td><td><pre>array(
+    0 => array(
+        'url' => 'http://www.example.com/path/to/file.jpg',
+        'filename' => 'file.jpg',
+        'path' => '/home/example.com/public_html/path/to/file.jpg',
+        'type' => 'image/jpg',
+        'size'=> 1234
+    ),
+    1 => array(
+        'url' => 'http://www.example.com/path/to/file2.jpg',
+        'filename' => 'file2.jpg',
+        'path' => '/home/example.com/public_html/path/to/file2.jpg',
+        'type' => 'image/jpg',
+        'size'=> 4567
+    )
+)</pre></td></tr>
+            <tr><td><strong>Date</strong><br>Quform_Element_Date</td><td>array</td><td><pre>array(
+    'day' => '23',
+    'month' => '11',
+    'year' => '2015'
+)</pre></td></tr>
+            <tr><td><strong>Time</strong><br>Quform_Element_Time</td><td>array</td><td><pre>array(
+    'hour' => '11',
+    'minute' => '58',
+    'ampm' => 'pm'
+)</pre></td></tr>
+            <tr><td><strong>Hidden</strong><br>&lt;input type="hidden"&gt;</td><td>string</td><td>'Foo'</td></tr>
+            <tr><td><strong>Password</strong><br>&lt;input type="password"&gt;</td><td>string</td><td>'Foo'</td></tr>
+        </table>
+      </div>
+      <h2 class="toggler toggler-closed">Adding custom form processing code</h2>
+      <div>
+       <p>You can run your own custom code on the form values when the form is submitted by adding code to <code>process.php</code>. We have
+       set aside two areas for you to do this before and after all other form processing has taken place. In <code>process.php</code>, search for these terms</p>
+       <ul>
+        <li>// Custom code section #1</li>
+        <li>// Custom code section #2</li>
+       </ul>
+       <p>You can add any code you like to either section. Below are examples of what you can do in each section. You have
+       access to the form instance <code>$form</code> and you can iterate through the form elements using the method <code>$form-&gt;getElements()</code>. You
+       can get specific element values using the code <code>$form-&gt;getValue('unique_element_name');</code>.</p>
+       <h3>Custom code section #1</h3>
+       <p>In this section you can add further form validation before the rest of the process code is done. You
+       can return from the process function, display an error to the form user and stop further processing. For example
+       if you wanted to log a user into your website, you could use code similar to below.</p>
+       <pre>$username = $form-&gt;getValue('username');
+$password = $form-&gt;getValue('password');
+
+if (!login($username, $password)) {
+    $form-&gt;setError('The username or password is incorrect');
+    return false;
+}</pre>
+       <p>NOTE: this is example code and will not actually work as a login system</p>
+       <h3>Custom code section #2</h3>
+       <p>In this section you can perform any further processing actions, for example saving the form data
+       to your subscriber email list.</p>
+      </div>
+      <h2 id="charset" class="toggler toggler-closed">Using another character encoding</h2>
+      <div>
+       <p>You should make sure the form is using the same character encoding as your website.  By default the
+       Quform works with UTF-8 encoding and will expect form data sent from your web page to be in this
+       encoding. If you are using the form in another language and if you have strange characters in the email
+       or similar issues this may be something to you need to check.</p>
+       <h3>Using UTF-8 encoding (recommended)</h3>
+       <p>Quform is already set up to use UTF-8 encoding, to set your web page to use UTF-8 encoding, insert the following meta tag just after the opening <code>&lt;head&gt;</code>
+       tag of the web page your form is on:</p>
+       <p><span class="bold">For HTML5 websites</span></p>
+       <pre>&lt;meta charset="UTF-8"&gt;</pre>
+       <p><span class="bold">For HTML4 / XHTML1.0 websites</span></p>
+       <pre>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;</pre>
+       <h3>Using another encoding such as ISO-8859-1</h3>
+       <p>If your web page uses another charset and you want the Quform to use the same charset, you change the existing code that sets the charset inside <code>common.php</code> (for example to use the ISO-8859-1 charset):</p>
+       <pre>defined('QUFORM_CHARSET') || define('QUFORM_CHARSET', 'ISO-8859-1');</pre>
+       <p>For a list of all valid character encodings, see the charset section of <a href="http://php.net/manual/en/function.htmlentities.php" class="popup">this page</a>.</p>
+      </div>
+      <h2 class="toggler toggler-closed">File uploads</h2>
+      <div>
+       <p>You can add file upload form elements to your form and you can attach the uploaded files to the email that is sent out to you.
+       You will need to do two things to get file uploads working:</p>
+       <ul>
+        <li>1.  Add your file upload HTML element to your form</li>
+        <li>2.  Add code to <code>process.php</code> to make the PHP code aware of your file element</li>
+       </ul>
+       <p>Each step is explained in more detail below:</p>
+       <h3>1.  Add your file upload HTML element to your form</h3>
+       <p>Below is sample HTML for a file upload field with standard Quform wrappers:</p>
+<pre>&lt;!-- Begin Upload element --&gt;
+&lt;div class="quform-element quform-element-file"&gt;
+    &lt;div class="quform-spacer"&gt;
+        &lt;label for="upload"&gt;Upload &lt;span class="quform-required"&gt;*&lt;/span&gt;&lt;/label&gt;
+        &lt;div class="quform-input"&gt;
+            &lt;input class="upload-element" id="upload" type="file" name="upload" /&gt;
+            &lt;p class="quform-description"&gt;All files allowed.  Maximum size 10MB.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Upload element --&gt;</pre>
+       <h3>2.  Add code to <code>process.php</code> to make the PHP code aware of your file element</h3>
+       <p>Now you need to make the PHP script aware of your new file upload field.  The code you need to do that is shown below.</p>
+       <pre>$upload = new Quform_Element_File('upload');
+$form-&gt;addElement($upload);</pre>
+        <p>See the troubleshooting section if you are having problems with the file uploads.</p>
+        <h3>More than one upload field</h3>
+        <p>To add another upload field, simply repeat the steps above, you will need to change the unique name of the element to something other
+        than upload and change the HTML and PHP code to match.</p>
+        <h3>Attaching the file upload to the notification email</h3>
+        <p>Any file uploads are automatically added to the email as attachments.</p>
+        <h3>Preventing a file upload from attaching to the notification email</h3>
+        <p>To prevent a file upload automatically attaching to the notification email, you can use the code below after creating your element in <code>process.php</code>.</p>
+        <pre>$upload-&gt;setAttach(false);</pre>
+        <h3>Making the upload required</h3>
+        <p>To make the upload required use the following code:</p>
+        <pre>$upload-&gt;getFileUploadValidator()-&gt;setRequired(true);</pre>
+        <h3>Setting allowed file extensions</h3>
+        <p>You can set the allowed file extensions so that any other files will be rejected by the form. You should pass in an array of lowercase file extensions e.g.:</p>
+        <pre>$upload-&gt;getFileUploadValidator()-&gt;setAllowedExtensions(array('gif', 'jpeg', 'jpg', 'png'));</pre>
+        <h3>Setting a maximum file size</h3>
+        <p>You can also limit the upload by file size. The default upload limit is 10MB since many email providers do not support attachments larger than that. To set the
+        maximum upload size, use this code:</p>
+        <pre>$upload-&gt;getFileUploadValidator()-&gt;setMaximumFileSize(10485760);</pre>
+        <p>The maximum file size is in bytes which is (Size in MB x 1048576)</p>
+        <p>NOTE: The file upload size can be limited by 4 things:</p>
+        <ul>
+            <li>Your hidden input MAX_FILE_SIZE as shown below</li>
+            <li>The Quform max size setting <code>$upload-&gt;getFileUploadValidator()-&gt;setMaximumFileSize(10485760);</code>, you can set this to no limit by using <code>$upload-&gt;getFileUploadValidator()-&gt;setMaximumFileSize(0);</code></li>
+            <li>The PHP configuration setting <a class="popup" href="http://php.net/manual/en/ini.core.php#ini.post-max-size">post_max_size</a></li>
+            <li>The PHP configuration setting <a class="popup" href="http://php.net/manual/en/ini.core.php#ini.upload-max-filesize">upload_max_filesize</a></li>
+        </ul>
+        <p>NOTE: The PHP manual recommends that you add a hidden input before your file input with the maximum allowed file size in bytes, this way users
+        do not have to wait for files to be uploaded before being told that they are too large (though they will still need to upload at least the number of bytes you specify before being notified of the error). The code you need to add is below and should be placed before your
+        file input element.  The number is the maximum file size in bytes (1048576 bytes = 1MB) so if you wanted to allow a 10MB file set the value to
+        1048576 x 10 = 10485760.</p>
+        <pre>&lt;input type="hidden" name="MAX_FILE_SIZE" value="10485760" /&gt;</pre>
+        <h3>Chaining upload validator methods</h3>
+        <p>You can chain the methods together to save yourself repeating code a lot. E.g.</p>
+        <pre>$upload-&gt;getFileUploadValidator()-&gt;setRequired(true)-&gt;setAllowedExtensions(array('jpg'))-&gt;setMaximumFileSize(1024055);</pre>
+        <h3>Grouping multiple file uploads</h3>
+        <p>If you have multiple upload fields you can group them under the same element using the multiple field syntax (square brackets) e.g. <code>element_name[]</code>. This way you
+        do not need to create a Quform_Element_File object in the PHP code for each upload element and they can all share the same settings. For example you could have the following code to group 3 uploads:</p>
+
+<pre>&lt;!-- Begin Grouped Upload element --&gt;
+&lt;div class="quform-element quform-element-file"&gt;
+        &lt;div class="quform-spacer"&gt;
+            &lt;label&gt;Grouped file upload &lt;span class="quform-required"&gt;*&lt;/span&gt;&lt;/label&gt;
+        &lt;div class="quform-input"&gt;
+            &lt;div class="quform-input-file"&gt;
+                &lt;input type="file" class="upload-element" name="uploads[]" /&gt;
+            &lt;/div&gt;
+            &lt;div class="quform-input-file"&gt;
+                &lt;input type="file" class="upload-element" name="uploads[]" /&gt;
+            &lt;/div&gt;
+            &lt;div class="quform-input-file"&gt;
+                &lt;input type="file" class="upload-element" name="uploads[]" /&gt;
+            &lt;/div&gt;
+            &lt;p class="quform-description"&gt;Allowed extensions .jpg, .jpeg, .png, .gif. Maximum size 1MB (each). Two uploads required.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Grouped Upload element --&gt;
+</pre>
+        <p>And in your process.php the code would look like:</p>
+        <pre>$uploads = new Quform_Element_File('uploads[]');
+$form-&gt;addElement($uploads);</pre>
+        <h3>Require a specific number of uploads for a multiple element</h3>
+        <p>If you used the grouped upload code above and you set the field to be required using <code>$upload-&gt;getFileUploadValidator()-&gt;setRequired(true);</code> then all 3 uploads would be
+        required.  If you wanted only one upload to be required from the group then you should add the code below:</p>
+        <pre>$upload-&gt;getFileUploadValidator()-&gt;setRequired(true)-&gt;setRequiredCount(1);</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Storing file uploads</h2>
+      <div>
+        <p>To enable the storage of file uploads to the server you need to do 3 things.</p>
+        <ul>
+            <li>1.  Add the HTML for the file upload field to your form</li>
+            <li>2.  Add the file element to <code>process.php</code></li>
+            <li>3.  Enable and configure file uploads in <code>process.php</code></li>
+        </ul>
+        <h3>1.  Add the HTML for the file upload field to your form</h3>
+        <p>Here's the HTML for a file upload field called <code>upload</code>, you should add this inside your form.</p>
+<pre>&lt;!-- Begin Upload element --&gt;
+&lt;div class="quform-element quform-element-file"&gt;
+    &lt;div class="quform-spacer"&gt;
+        &lt;label for="upload"&gt;Upload &lt;span class="quform-required"&gt;*&lt;/span>&lt;/label&gt;
+        &lt;div class="quform-input"&gt;
+            &lt;input id="upload" type="file" name="upload" /&gt;
+            &lt;p class="quform-description">All files allowed.  Maximum size 10MB.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Upload element --&gt;</pre>
+        <h3>2.  Add the file element to <code>process.php</code></h3>
+        <p>Open <code>process.php</code> and add the code to create the file element at the element configuration section.</p>
+        <pre>$upload = new Quform_Element_File('upload');
+$form-&gt;addElement($upload);</pre>
+        <h3>3.  Enable and configure file uploads in <code>process.php</code></h3>
+        <p>In <code>process.php</code> search for the term <span class="find">$config['saveUploads']</span> and set it to <code>true</code>. Also
+        check the setting below <code>$config['uploadPath']</code>, by default this will save the uploads into the <code>quform/uploads/</code> folder,
+        you should make sure that this folder is writable by the web server user, this may require setting permissions 0777 on the folder.</p>
+       <h3>Changing the upload save path per element</h3>
+       <p>You can have a different file upload path for each element. To do that use the code below after you have created your element
+       in <code>process.php</code>.</p>
+       <pre>$upload-&gt;setSavePath(QUFORM_ROOT . '/folder');</pre>
+       <p>The above will set the save path to the directory <code>quform/folder/</code>. If you want the path to be outside the quform folder then
+       you should enter the path to the folder you want to save the files to. For example:</p>
+       <pre>$upload-&gt;setSavePath('/home/user340349/web/public_html/files');</pre>
+       <h3>Preventing the file from being uploaded</h3>
+       <p>By default, if saving to the server is enabled then all uploaded files will be saved to the server. If you want to disable a file upload element
+       from saving the uploaded files to the server, use the code after you have created the element in <code>process.php</code>.</p>
+       <pre>$upload-&gt;setSave(false);</pre>
+      </div>
+
+        <h2 class="toggler toggler-closed">Using reCAPTCHA v3</h2>
+        <div>
+            <p>To use reCAPTCHA v3 follow the 4 steps below.</p>
+
+            <h2>Step 1</h2>
+
+            <p>You will need both a Site and Secret key, you can get these from Google for free by <a href="https://www.google.com/recaptcha/admin" target="_blank">clicking here</a>. When creating the keys choose reCAPTCHA v3.</p>
+
+            <h2>Step 2</h2>
+
+            <p>Next, put the code for the reCAPTCHA into the form HTML. Copy and paste the following code into the form, for example above the submit button.</p>
+
+            <pre>&lt;div class="quform-element quform-element-recaptcha"&gt;
+    &lt;div class="quform-input"&gt;
+        &lt;div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-size="invisible" data-version="v3"&gt;&lt;/div&gt;
+        &lt;noscript&gt;Please enable JavaScript to submit this form.&lt;/noscript&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+            <ul>
+                <li>On line 3, replace <code>YOUR_SITE_KEY</code> with your reCAPTCHA Site key obtained in Step 1</li>
+            </ul>
+
+            <h2>Step 3</h2>
+
+            <p>At the bottom of the form HTML page, below this line that was added when installing Quform:</p>
+
+            <pre>&lt;script type="text/javascript" src="quform/js/scripts.js"&gt;&lt;/script&gt;</pre>
+
+            <p>Add the following code:</p>
+
+            <pre>&lt;script&gt;
+    window.QuformRecaptchaLoaded = function () {
+        if (window.grecaptcha && window.jQuery) {
+            jQuery('.g-recaptcha').each(function () {
+                var $recaptcha = jQuery(this);
+
+                if ($recaptcha.is(':empty')) {
+                    $recaptcha.data('recaptcha-id', grecaptcha.render($recaptcha[0]));
+                }
+            });
+        }
+    };
+&lt;/script&gt;
+&lt;script src="https://www.google.com/recaptcha/api.js?onload=QuformRecaptchaLoaded&amp;render=explicit" async defer&gt;&lt;/script&gt;</pre>
+
+            <h2>Step 4</h2>
+
+            <p>Open <span class="file">process.php</span> and paste the following code into the file, where you paste it is not really important just find a blank line around where the other elements are configured.</p>
+
+            <pre>$recaptcha = new Quform_Element('g-recaptcha-response', 'reCAPTCHA');
+$recaptcha-&gt;addValidator('required');
+$recaptcha-&gt;addValidator('recaptcha', array(
+    'secretKey' =&gt; 'YOUR_SECRET_KEY',
+    'version' =&gt; 'v3',
+    'threshold' =&gt; 0.5
+));
+$recaptcha-&gt;setIsHidden(true);
+$form-&gt;addElement($recaptcha);</pre>
+
+            <ul>
+                <li>On line 4, replace <code>YOUR_SECRET_KEY</code> with your reCAPTCHA Secret key obtained in Step 1</li>
+                <li>On line 6, you can adjust the score threshold, submissions with scores lower than this will be rejected (see <a href="https://developers.google.com/recaptcha/docs/v3#score">this page</a> for more information)</li>
+            </ul>
+
+            <h2>Changing the reCAPTCHA theme</h2>
+
+            <p>There are 2 reCAPTCHA themes available (light or dark), the default is light. To change it find the div with class <code>g-recaptcha</code> and add the attribute <code>data-theme="dark"</code>.</p>
+
+        </div>
+
+      <h2 class="toggler toggler-closed">Using reCAPTCHA v2 ("I'm not a robot" Checkbox)</h2>
+      <div>
+
+          <p>To use reCAPTCHA v2 ("I'm not a robot" Checkbox) follow the 4 steps below.</p>
+
+          <h2>Step 1</h2>
+
+          <p>You will need both a Site and Secret key, you can get these from Google for free by <a href="https://www.google.com/recaptcha/admin" target="_blank">clicking here</a>. When creating the keys choose reCAPTCHA v2 - "I'm not a robot" tickbox.</p>
+
+          <h2>Step 2</h2>
+
+          <p>Next, put the code for the reCAPTCHA into the form HTML. Copy and paste the following code into the form at the location you would like the reCAPTCHA to appear.</p>
+
+          <pre>&lt;div class="quform-element quform-element-recaptcha"&gt;
+    &lt;div class="quform-spacer"&gt;
+        &lt;label&gt;Are you human? &lt;span class="quform-required"&gt;*&lt;/span&gt;&lt;/label&gt;
+        &lt;div class="quform-input"&gt;
+            &lt;div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"&gt;&lt;/div&gt;
+            &lt;noscript&gt;Please enable JavaScript to submit this form.&lt;/noscript&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <ul>
+              <li>On line 5, replace <code>YOUR_SITE_KEY</code> with your reCAPTCHA Site key obtained in Step 1</li>
+          </ul>
+
+          <h2>Step 3</h2>
+
+          <p>At the bottom of the form HTML page, below this line that was added when installing Quform:</p>
+
+          <pre>&lt;script type="text/javascript" src="quform/js/scripts.js"&gt;&lt;/script&gt;</pre>
+
+          <p>Add the following code:</p>
+
+          <pre>&lt;script&gt;
+    window.QuformRecaptchaLoaded = function () {
+        if (window.grecaptcha && window.jQuery) {
+            jQuery('.g-recaptcha').each(function () {
+                var $recaptcha = jQuery(this);
+
+                if ($recaptcha.is(':empty')) {
+                    $recaptcha.data('recaptcha-id', grecaptcha.render($recaptcha[0]));
+                }
+            });
+        }
+    };
+&lt;/script&gt;
+&lt;script src="https://www.google.com/recaptcha/api.js?onload=QuformRecaptchaLoaded&amp;render=explicit" async defer&gt;&lt;/script&gt;</pre>
+
+          <h2>Step 4</h2>
+
+          <p>Open <span class="file">process.php</span> and paste the following code into the file, where you paste it is not really important just find a blank line around where the other elements are configured.</p>
+
+          <pre>$recaptcha = new Quform_Element('g-recaptcha-response', 'reCAPTCHA');
+$recaptcha-&gt;addValidator('required');
+$recaptcha-&gt;addValidator('recaptcha', array('secretKey' =&gt; 'YOUR_SECRET_KEY'));
+$recaptcha-&gt;setIsHidden(true);
+$form-&gt;addElement($recaptcha);</pre>
+
+          <ul>
+              <li>On line 3, replace <code>YOUR_SECRET_KEY</code> with your reCAPTCHA Secret key obtained in Step 1</li>
+          </ul>
+
+          <h3>Adding support for users that don't have JavaScript enabled</h3>
+
+          <p>reCAPTCHA can only provide the optimal experience in terms of security and usability with JavaScript enabled. However, if supporting users who have disabled JavaScript is important for your site, you can enable the alternative challenge with the following steps. Navigate to the <a href="https://www.google.com/recaptcha/admin" target="_blank">admin console</a> and move the security preference slider to "easiest for users". Keep in mind that with this setting reCAPTCHA won't be able to use all of its security features.</p>
+
+          <img src="assets/securitypreference_easiest.png" alt="reCAPTCHA security preference easiest" width="614" height="188" />
+
+          <p><strong>Note: it may take 5-10 minutes for the change to take effect.</strong></p>
+
+          <p>Then, find the following line of code within the reCAPTCHA HTML that you added to the form in Step 2.</p>
+
+          <pre>&lt;noscript&gt;Please enable JavaScript to submit this form.&lt;/noscript&gt;</pre>
+
+          <p>And replace it with the code below.</p>
+
+          <pre>&lt;noscript&gt;
+  &lt;div&gt;
+    &lt;div style="width: 302px; height: 422px; position: relative;"&gt;
+      &lt;div style="width: 302px; height: 422px; position: absolute;"&gt;
+        &lt;iframe src="https://www.google.com/recaptcha/api/fallback?k=YOUR_SITE_KEY"
+                frameborder="0" scrolling="no"
+                style="width: 302px; height:422px; border-style: none;"&gt;
+        &lt;/iframe&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 300px; height: 60px; border-style: none;
+                   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;"&gt;
+      &lt;textarea name="g-recaptcha-response"
+                   class="g-recaptcha-response"
+                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                          margin: 10px 25px; padding: 0px; resize: none;"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/noscript&gt;</pre>
+
+          <ul>
+              <li>On line 5, replace <code>YOUR_SITE_KEY</code> with your reCAPTCHA Site key obtained in Step 1</li>
+          </ul>
+
+          <h2>Changing the reCAPTCHA theme</h2>
+
+          <p>There are 2 reCAPTCHA themes available (light or dark), the default is light. To change it find the div with class <code>g-recaptcha</code> and add the attribute <code>data-theme="dark"</code>.</p>
+
+        </div>
+
+        <h2 class="toggler toggler-closed">Using reCAPTCHA v2 (Invisible reCAPTCHA badge)</h2>
+        <div>
+
+            <p>To use reCAPTCHA v2 (Invisible reCAPTCHA badge) follow the 4 steps below.</p>
+
+            <h2>Step 1</h2>
+
+            <p>You will need both a Site and Secret key, you can get these from Google for free by <a href="https://www.google.com/recaptcha/admin" target="_blank">clicking here</a>. When creating the keys choose reCAPTCHA v2 - Invisible reCAPTCHA badge.</p>
+
+            <h2>Step 2</h2>
+
+            <p>Next, put the code for the reCAPTCHA into the form HTML. Copy and paste the following code into the form, for example above the submit button.</p>
+
+            <pre>&lt;div class="quform-element quform-element-recaptcha"&gt;
+    &lt;div class="quform-input"&gt;
+        &lt;div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-size="invisible"&gt;&lt;/div&gt;
+        &lt;noscript&gt;Please enable JavaScript to submit this form.&lt;/noscript&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+            <ul>
+                <li>On line 3, replace <code>YOUR_SITE_KEY</code> with your reCAPTCHA Site key obtained in Step 1</li>
+            </ul>
+
+            <h2>Step 3</h2>
+
+            <p>At the bottom of the form HTML page, below this line that was added when installing Quform:</p>
+
+            <pre>&lt;script type="text/javascript" src="quform/js/scripts.js"&gt;&lt;/script&gt;</pre>
+
+            <p>Add the following code:</p>
+
+            <pre>&lt;script&gt;
+    window.QuformRecaptchaLoaded = function () {
+        if (window.grecaptcha && window.jQuery) {
+            jQuery('.g-recaptcha').each(function () {
+                var $recaptcha = jQuery(this);
+
+                if ($recaptcha.is(':empty')) {
+                    var config = {};
+
+                    if ($recaptcha.data('version') !== 'v3' && $recaptcha.data('size') === 'invisible') {
+                        config.callback = function () {
+                            $recaptcha.closest('.quform').data('quform').ajaxSubmit();
+                        };
+                    }
+
+                    $recaptcha.data('recaptcha-id', grecaptcha.render($recaptcha[0], config));
+                }
+            });
+        }
+    };
+&lt;/script&gt;
+&lt;script src="https://www.google.com/recaptcha/api.js?onload=QuformRecaptchaLoaded&amp;render=explicit" async defer&gt;&lt;/script&gt;</pre>
+
+        <h2>Step 4</h2>
+
+        <p>Open <span class="file">process.php</span> and paste the following code into the file, where you paste it is not really important just find a blank line around where the other elements are configured.</p>
+
+        <pre>$recaptcha = new Quform_Element('g-recaptcha-response', 'reCAPTCHA');
+$recaptcha-&gt;addValidator('required');
+$recaptcha-&gt;addValidator('recaptcha', array('secretKey' =&gt; 'YOUR_SECRET_KEY'));
+$recaptcha-&gt;setIsHidden(true);
+$form-&gt;addElement($recaptcha);</pre>
+
+        <ul>
+            <li>On line 3, replace <code>YOUR_SECRET_KEY</code> with your reCAPTCHA Secret key obtained in Step 1</li>
+        </ul>
+
+        <h2>Changing the reCAPTCHA theme</h2>
+
+        <p>There are 2 reCAPTCHA themes available (light or dark), the default is light. To change it find the div with class <code>g-recaptcha</code> and add the attribute <code>data-theme="dark"</code>.</p>
+
+      </div>
+      <h2 class="toggler toggler-closed">Using a custom CAPTCHA</h2>
+      <div>
+        <p>I will explain briefly how to make a CAPTCHA field that will generate a random image, store the result
+        using PHP sessions, then use an Quform validator to check if the entered result is correct. There are
+        4 things you will need to do:</p>
+        <ul>
+            <li>1. Create a PHP file that will generate the CAPTCHA image and store the expected result</li>
+            <li>2. Change the existing CAPTCHA image to link to the PHP file above</li>
+            <li>3. Customise the supplied CAPTCHA validator to check the submitted result against the expected result</li>
+            <li>4. Add the CAPTCHA validator to the form element</li>
+        </ul>
+        <p>Each step is explained in more detail below.</p>
+        <h3>1. Create a PHP file that will generate the CAPTCHA image and store the expected result</h3>
+        <p>Create a random CAPTCHA image using PHP and the GD image extension. There are many examples
+        on the internet on how to do this, for example, Step 1 of <a target="_blank" href="http://www.the-art-of-web.com/php/captcha/">this page</a>.
+        If you are using the code from that link, make sure to change the <code>$_SESSION['digit']</code> part to <code>$_SESSION['captcha']</code> and it will work seamlessly with Quform. Save the file as captcha.php</p>
+        <h3>2. Change the existing CAPTCHA image to link to the PHP file above</h3>
+        <p>Change the img <code>src=""</code> attribute of the existing CAPTCHA to point to your new captcha.php file.</p>
+        <h3>3. Customise the supplied CAPTCHA validator to check the submitted result against the expected result</h3>
+        <p>Open the file lib/Quform/Validator/Captcha.php an make sure the code looks to suit your requirements, e.g.
+        your security code expected result is stored in <code>$_SESSION['captcha']</code>.  You should also add
+        <code>&lt;?php session_start(); ?&gt;</code> to the web page with your form on it, and also at the top of
+        <code>quform/process.php</code>.</p>
+        <h3>4. Add the CAPTCHA validator to the form element</h3>
+        <p>In <code>quform/process.php</code> add the 'captcha' validator to your CAPTCHA element.</p>
+        <pre>$captcha-&gt;addValidator('captcha');</pre>
+        <p>The instructions are probably too difficult for a novice web designer to do, so if that's you then
+        you should either stick with the basic CAPTCHA field or hire a professional web developer to set it up
+        for you.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Using a Honeypot CAPTCHA</h2>
+      <div>
+        <p>A Honeypot CAPTCHA is completely hidden from legitimate users but it still very successful at blocking spam. The technique involves adding a field
+        that is hidden from the user and have a validator that will not allow submission if there is anything entered into the field. Bots will usually fill in
+        all of the fields which is why this works so well. To install this field, add the following HTML to your form:</p>
+        <pre>&lt;div class="quform-hidden"&gt;
+    &lt;label&gt;Please leave this field empty &lt;input type="text" name="field"&gt;&lt;/label&gt;
+&lt;/div&gt;</pre>
+        <p>Then add the following code to the element configuration section in process.php:</p>
+        <pre>$honeypot = new Quform_Element('field');
+$honeypot-&gt;addValidator('honeypot');
+$form-&gt;addElement($honeypot);</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Custom JavaScript success callbacks</h2>
+      <div>
+        <p>There are 3 success callbacks available for you to alter the behaviour when the form is successfully
+        submitted.</p>
+        <ul>
+            <li>successStart</li>
+            <li>success</li>
+            <li>successEnd</li>
+        </ul>
+        <h3>successStart</h3>
+        <p>successStart is called when the form has been successfully submitted and before any other
+        success code is run. If you want to run any code before anything else this is the place to do it.
+        You can add this on line 2 of <code>js/scripts.js</code></p>
+        <pre>$('form.quform').Quform({
+    successStart: function (response) {
+        // Your custom JavaScript
+    }
+});</pre>
+        <h3>success</h3>
+        <p>If you specify a <code>success</code> callback this will override the default form success functionality of
+        resetting the form and fading in the success message. If you do specify a custom success function
+        the successEnd function hook will no longer be available, unless you include it in your own code of course. You can add this on line 2 of <code>js/scripts.js</code></p>
+        <pre>$('form.quform').Quform({
+    success: function (response) {
+        // Your custom JavaScript
+    }
+});</pre>
+        <h3>successEnd</h3>
+        <p>The successEnd function is called after the default success functionality of fading out
+        the form and fading in the success message has finished animating. You can add this on line 2 of <code>js/scripts.js</code></p>
+        <pre>$('form.quform').Quform({
+    successEnd: function (response) {
+        // Your custom JavaScript
+    }
+});</pre>
+        <h3>Data accessible from inside your custom functions</h3>
+        <ul>
+            <li><strong>this</strong> - The Quform object instance
+            <ul>
+                <li><strong>this.$form</strong> - The jQuery object representing your form</li>
+                <li><strong>this.options</strong> - The options object passed to the Quform instance</li>
+                <li><strong>this.$container</strong> - The jQuery object representing the form element container</li>
+                <li><strong>this.$loading</strong> - The jQuery object representing the loading text/gif</li>
+                <li><strong>this.$submitButton</strong> - The jQuery object representing the submit button</li>
+            </ul></li>
+            <li><strong>response</strong> - The Ajax response from the server</li>
+        </ul>
+      </div>
+      <h2 class="toggler toggler-closed">Custom JavaScript error callbacks</h2>
+      <div>
+        <p>There are 3 error callbacks available for you to alter the behaviour when the form contains
+        errors. These callbacks are called when the form contains errors i.e. elements have not passed validation.</p>
+        <ul>
+            <li>errorStart</li>
+            <li>error</li>
+            <li>errorEnd</li>
+        </ul>
+        <h3>errorStart</h3>
+        <p>errorStart is called before any other error processing code is run. If you want to run any
+        code before anything else this is the place to do it. You can add this on line 2 of <code>js/scripts.js</code></p>
+        <pre>$('form.quform').Quform({
+    errorStart: function (response) {
+        // Your custom JavaScript
+    }
+});</pre>
+        <p>For example to show a message after the submit button if the form has errors, use the following code in
+        <code>quform/js/scripts.js</code> and change the code on <strong>line 2</strong>:</p>
+        <pre>$('form.quform').Quform({
+    errorStart: function(response) {
+        $('.form-error', this.$form).remove(); // Remove any previous error messages
+        this.$container.after('&lt;div class="form-error"&gt;There was an error in the form&lt;/div&gt;');
+    }
+});</pre>
+        <h3>error</h3>
+        <p>If you specify an <code>error</code> callback this will override the default form error functionality of
+        appending the errors beneath the input for each element, so you will be able to customise how
+        the errors are displayed. If you do specify a custom error function
+        the errorEnd function hook will no longer be available, unless you include it in your own code of course. You can add this on line 2 of <code>js/scripts.js</code></p>
+        <pre>$('form.quform').Quform({
+    error: function (response) {
+        // Your custom JavaScript
+    }
+});</pre>
+        <h3>errorEnd</h3>
+        <p>The errorEnd function is called after the default error functionality of displaying
+        the errors underneath the input elements has completed. You can add this on line 2 of <code>js/scripts.js</code></p>
+        <pre>$('form.quform').Quform({
+    errorEnd: function (response) {
+        // Your custom JavaScript
+    }
+});</pre>
+        <h3>Data accessible from inside your custom functions</h3>
+        <ul>
+            <li><strong>this</strong> - The Quform object instance
+            <ul>
+                <li><strong>this.$form</strong> - The jQuery object representing your form</li>
+                <li><strong>this.options</strong> - The options object passed to the Quform instance</li>
+                <li><strong>this.$container</strong> - The jQuery object representing the form element container</li>
+                <li><strong>this.$loading</strong> - The jQuery object representing the loading text/gif</li>
+                <li><strong>this.$submitButton</strong> - The jQuery object representing the submit button</li>
+            </ul></li>
+            <li><strong>response</strong> - The Ajax response from the server</li>
+        </ul>
+      </div>
+      <h2 class="toggler toggler-closed">Quform JavaScript options</h2>
+      <div>
+        <p>There are a number of options you can use to customize the Quform JavaScript. See the table
+        below for all options and below the table for examples.</p>
+        <table class="options">
+            <tr><th>Option</th><th>Default</th><th>Notes</th></tr>
+            <tr><td>container</td><td>.quform-elements</td><td>The jQuery selector of the element container</td></tr>
+            <tr><td>loading</td><td>.quform-loading-wrap .loading</td><td>The jQuery selector of the loading image/text</td></tr>
+            <tr><td>submitButton</td><td>.quform-submit-button</td><td>The jQuery selector of the submit button</td></tr>
+            <tr><td>reset</td><td>true</td><td>Reset the form to its default state after successful submit</td></tr>
+            <tr><td>hideFormSpeed</td><td>false</td><td>The jQuery animate speed that the form will fade out, if false the form will not fade out</td></tr>
+            <tr><td>successFadeInSpeed</td><td>slow</td><td>The jQuery animate speed that the success message will fade in</td></tr>
+            <tr><td>successFadeOutSpeed</td><td>slow</td><td>The jQuery animate speed that the success message will fade out</td></tr>
+            <tr><td>successTimeout</td><td>8000</td><td>The time to display the success message in milliseconds. 1000 = 1 second. Set to 0 to never hide the message.</td></tr>
+            <tr><td>scrolling</td><td>true</td><td>Scroll automatically to errors and messages</td></tr>
+            <tr><td>scrollSpeed</td><td>400</td><td>The jQuery animate speed of the scrolling animation</td></tr>
+            <tr><td>scrollThreshold</td><td>20</td><td>If the scroll target is this number of pixels or less inside the viewport, scrolling to it will still happen</td></tr>
+            <tr><td>scrollOffset</td><td>-50</td><td>How far above the target to scroll too</td></tr>
+            <tr><td>errorTitle</td><td>There was a problem</td><td>The title of the error message if a serious error occurs</td></tr>
+            <tr><td>errorResponseEmpty</td><td>An error occurred and the response from the server was empty.</td><td>The error message text if there is a server side problem</td></tr>
+            <tr><td>errorAjax</td><td>An Ajax error occurred.</td><td>The error message if there is an Ajax problem</td></tr>
+            <tr><td>errorPosition</td><td>above</td><td>The position of global form error message, 'above' or 'below' the form</td></tr>
+        </table>
+
+		<h3>Examples</h3>
+
+		On line 2 of the <span class="file">quform/js/scripts.js</span> file you will find a line of code that sets up the Quform script on all <code>&lt;form&gt;</code> tags with the attribute <code>class="quform"</code>.
+
+		<pre lang="js">$('form.quform').Quform();</pre>
+
+		To use the examples below, replace that line with the code from one of the examples below. You are then free to add option to (or remove options from) the new JavaScript object passed into the <code>Quform()</code> function. Note that this will affect all forms.
+
+		<h4>Modifying the scroll offset</h4>
+
+		<pre lang="js">$('form.quform').Quform({
+    scrollOffset: -150
+});</pre>
+
+		<h4>Never hiding the success message</h4>
+
+		<pre lang="js">$('form.quform').Quform({
+    successTimeout: 0
+});</pre>
+
+		<h4>Translating the global error messages</h4>
+
+		<pre lang="js">$('form.quform').Quform({
+    errorTitle: 'Er was een probleem',
+    errorResponseEmpty: 'Er is een fout opgetreden, probeer het aub opnieuw.',
+    errorAjax: 'Er is een fout opgetreden, probeer het aub opnieuw.'
+});</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Filters</h2>
+      <div>
+       <p>You can use Filters to strip data from the user submitted value such as HTML tags (which may
+        be harmful) and useless white space and the start and end of the value.  There are filters
+        included with the form that do just that and more, although you can add your own too - see Adding a new filter below.</p>
+        <h3>Included filters</h3>
+        <ul>
+            <li><strong>trim</strong> - strips whitespace and other characters from the start and end</li>
+            <li><strong>stripTags</strong> - strips all HTML tags</li>
+            <li><strong>digits</strong> - filters everything except digits</li>
+            <li><strong>alphaNumeric</strong> - filters everything except alphanumeric characters</li>
+            <li><strong>alpha</strong> - filters everything except alphabet characters</li>
+            <li><strong>regex</strong> - filters everything matching the given regular expression</li>
+        </ul>
+        <p>So if you assign a Filter to an Element then the value that will appear in the email
+        will be the filtered value.  The values are filtered before they are validated too.</p>
+        <p>As an extreme
+        example, a value like ' &lt;script&gt;&lt;/script&gt;  ' with the <strong>stripTags</strong> and <strong>trim</strong> filter and the <strong>required</strong> validator
+        will actually fail validation, because once the tags are stripped and the white space is trimmed
+        the value is empty so it fails the <strong>required</strong> validator.</p>
+       </div>
+      <h2 class="toggler toggler-closed">Adding a filter to a form element</h2>
+      <div>
+        <p>To add a filter to an element, you will need to open <code>process.php</code> and find the
+        code that creates the element you want to add the filter to.  It may already have a line below it
+        that is calling <code>addFilters()</code>, in that case just add the name of the filter you want to add at the
+        end of the array that is passed in.  If the element had the following code.</p>
+        <pre>$element-&gt;addFilter('trim');</pre>
+        <p>You can just add another line below that adds the new filter. For example if you wanted to add the
+        <strong>alphaNumeric</strong> filter also you can make the code:</p>
+        <pre>$element-&gt;addFilter('trim');
+$element-&gt;addFilter('alphaNumeric');</pre>
+        <p>You could also use the following code</p>
+        <pre>$element-&gt;addFilter<strong>s</strong>(array('trim', 'alphaNumeric'));</pre>
+        <p>You can also instantiate the filter directly then add it to the element.
+        Which may help with your own custom filters if you need to make any that you need to pass options to, for example.</p>
+        <pre>$trimFilter = new Quform_Filter_Trim();
+$element-&gt;addFilter($trimFilter);</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Removing a filter from a form element</h2>
+      <div>
+        <p>To remove a filter from a form element, find the code that creates and configures the element
+        in <code>process.php</code>.  Look for the line that is adding the filters e.g.</p>
+        <pre>$element-&gt;addFilters(array('stripTags', 'trim'));</pre>
+        <p>To remove only the stripTags filter:</p>
+        <pre>$element-&gt;addFilters(array('trim'));</pre>
+        <p>To remove both the filters delete or comment out the entire line.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Filter options (Advanced)</h2>
+      <div>
+        <p>You can pass in options to filters to change the way they operate.  You can pass in options using the <code>addFilter()</code> method on an element. Pass in an array as the second argument containing the array keys that are options of the filter.  See the documentation below on each filter or the code for the filters in the <code>quform/lib/Quform/Filter/</code> folder to see the options you can use.</p>
+        <pre>$element-&gt;addFilter('stripTags', array('allowableTags' =&gt; array('&lt;br&gt;', '&lt;p&gt;')));</pre>
+        <p>You can also pass in options at instantiation and then add the filter object to your element.</p>
+        <pre>$stripTagsFilter = new Quform_Filter_StripTags(array('allowableTags' =&gt; array('&lt;br&gt;')));
+$element-&gt;addFilter($stripTagsFilter);</pre>
+
+        <h3>Alpha filter</h3>
+        <p>Options</p>
+        <ul>
+            <li><strong>allowWhiteSpace</strong> - boolean true or false, if true white space is not filtered, default false</li>
+        </ul>
+        <pre>$element-&gt;addFilter('alpha', array('allowWhiteSpace' =&gt; true));</pre>
+
+        <h3>Alphanumeric filter</h3>
+        <p>Options</p>
+        <ul>
+            <li><strong>allowWhiteSpace</strong> - boolean true or false, if true white space is not filtered, default false</li>
+        </ul>
+        <pre>$element-&gt;addFilter('alphaNumeric', array('allowWhiteSpace' =&gt; true));</pre>
+
+        <h3>Digits filter</h3>
+        <p>Options</p>
+        <ul>
+            <li><strong>allowWhiteSpace</strong> - boolean true or false, if true white space is not filtered, default false</li>
+        </ul>
+        <pre>$element-&gt;addFilter('digits', array('allowWhiteSpace' =&gt; true));</pre>
+
+        <h3>Filename filter</h3>
+        <p>No options.</p>
+        <pre>$element-&gt;addFilter('filename');</pre>
+
+        <h3>Regex filter</h3>
+        <p>Options</p>
+        <ul>
+            <li><strong>pattern</strong> - string regex pattern passed as-is to <a href="http://php.net/manual/en/function.preg-replace.php" class="popup">preg_replace</a></li>
+        </ul>
+        <pre>$element-&gt;addFilter('regex', array('pattern' =&gt; '/\d+/'));</pre>
+
+        <h3>StripTags filter</h3>
+        <p>Options</p>
+        <ul>
+            <li><strong>allowableTags</strong> - an array of strings of the tags you do not want to be stripped</li>
+        </ul>
+        <pre>$element-&gt;addFilter('stripTags', array('allowableTags' =&gt; array('&lt;br&gt;', '&lt;p&gt;')));</pre>
+
+        <h3>Trim filter</h3>
+        <p>No options.</p>
+        <pre>$element-&gt;addFilter('trim');</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Validators</h2>
+      <div>
+        <p>Validators check the user submitted values against a set of rules to see if
+        they are valid.  If the value is valid nothing happens, the next validator and form element will be checked for validity.
+        If the value is not valid, the error messages generated
+        by the Validator will be returned back to the user and the form will not be submitted.  If the value
+        submitted to every form element passes that form element's validators then the entire
+        form is valid and it is submitted.</p>
+        <p>There are 13 validators included with the script, although you are free to add as many as you want - see Adding a
+        new validator below.</p>
+        <ul>
+            <li><strong>required</strong> - The value is required and it cannot be empty</li>
+            <li><strong>email</strong> - The value must be a valid email address</li>
+            <li><strong>captcha</strong> - The value must match the letters set by a captcha script</li>
+            <li><strong>stringLength</strong> - The length of the value must be between the set min and max</li>
+            <li><strong>lessThan</strong> - The value must be less than the set max (numerically)</li>
+            <li><strong>greaterThan</strong> - The value must be greater than the set min (numerically)</li>
+            <li><strong>digits</strong> - The value must be only digits</li>
+            <li><strong>alphaNumeric</strong> - The value must have only alphanumeric characters</li>
+            <li><strong>alpha</strong> - The value must have only alphabet characters</li>
+            <li><strong>fileUpload</strong> - Validates the file upload against set options</li>
+            <li><strong>identical</strong> - The value must be identical to the set token</li>
+            <li><strong>recaptcha</strong> - The value is validated by the reCAPTCHA service</li>
+            <li><strong>inArray</strong> - The value must be in the given array</li>
+            <li><strong>wordCount</strong> - The word count of the value must be between the set min and max</li>
+            <li><strong>regex</strong> - The value is validated by the given regular expression pattern</li>
+            <li><strong>creditCard</strong> - The value must be a valid credit card number</li>
+        </ul>
+      </div>
+      <h2 class="toggler toggler-closed">Adding a validator to a form element</h2>
+      <div>
+        <p>To add a validator to an element, you will need to open <code>process.php</code> and find the
+        code that creates the element you want to add the validator to.  It may already have a line below it
+        that is calling <code>addValidators()</code>, in that case just add the name of the validator you want to add at the
+        end of the array that is passed in.  If the element had the following code.</p>
+        <pre>$element-&gt;addValidator('required');</pre>
+        <p>You can just add another line below that adds the new validator. For example if you wanted to add the
+        <strong>digits</strong> validator also you can make the code:</p>
+        <pre>$element-&gt;addValidator('required');
+$element-&gt;addValidator('digits');</pre>
+        <p>You could also use the following code</p>
+        <pre>$element-&gt;addValidator<strong>s</strong>(array('required', 'digits'));</pre>
+        <p>You can also instantiate the validator directly then add it to the element.
+        Which may help with your own custom validators if you need to make any that you need to pass options to, for example.</p>
+        <pre>$emailValidator = new Quform_Validator_Email();
+$element-&gt;addValidator($emailValidator);</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Removing a validator from a form element</h2>
+      <div>
+        <p>To remove a validator from an element, you will need to open <code>process.php</code> and find the
+        code that creates and configures the element you want to remove the validator from. Look for the
+        line that has code similar to the code below.</p>
+        <pre>$element-&gt;addValidators(array('required', 'email'));</pre>
+        <p>To remove only the email validator make it like so.</p>
+        <pre>$element-&gt;addValidators(array('required'));</pre>
+        <p>To remove all validators, delete or comment out the entire line.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Changing the error message generated by a validator</h2>
+      <div>
+        <h3>Changing a single error message without affecting any other elements or forms</h3>
+        <p>The preferred way to do this is to pass an options array to the validator when adding it to an element,
+        with the 'messages' key and this contains another array with the key of the error message and your new
+        error message text. You can use this method to set different error messages for different elements
+        that have the same validator. For example, to change the email address validator message.</p>
+        <pre>$element-&gt;addValidator('email', array(
+    'messages' =&gt; array('invalid' =&gt; 'The email address is invalid')
+));</pre>
+        <p>The message keys and available placeholders are shown in the <strong>Validator options (Advanced)</strong> section below.</p>
+        <h3>Changing the default error messages (affects other forms and elements)</h3>
+        <p>In some situations (such as translating) it may be faster to just change the default error messages.
+        You will need to go to <code>quform/lib/Quform/Validator/</code> and find the
+        file for the Validator you want to change.  Once you've found it, open the file and look
+        inside and near the top of the file you should see a PHP array that sets the default error messages e.g.</p>
+        <pre>protected $_messageTemplates = array(
+    'invalid' =&gt; 'Invalid email address'
+);</pre>
+        <p>This is the messages that is returned to the form when validation fails, change it to whatever you like. Note: some
+        validators have more than one message for different errors.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Validator options (Advanced)</h2>
+      <div>
+        <p>You can pass in options to validators to change the way they operate.  You can pass in options using the <code>addValidator()</code> method on an element. Pass in an array as the second argument containing the array keys that are options of the validator.  See the documentation below on each validator or the code for the validators in the files in the <code>quform/lib/Quform/Validator/</code> folder to see the options you can use.</p>
+        <pre>$element-&gt;addValidator('stringLength', array('min' =&gt; 5, 'max' =&gt; 10));</pre>
+        <p>You can also pass in options at instantiation and then add the validator object to your element.</p>
+        <pre>$stringLengthValidator = new Quform_Validator_StringLength(array('min' =&gt; 5, 'max' =&gt; 10));
+$element-&gt;addValidator($stringLengthValidator);</pre>
+
+        <h3>Alpha validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>allowWhiteSpace</strong> - boolean true or false, if true white space is allowed, default false</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Only alphabet characters are allowed</td><td>%s = the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('alpha', array('allowWhiteSpace' =&gt; true));</pre>
+        <pre>$element-&gt;addValidator('alpha', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; '%s does not contain only alphabet characters'
+    )
+));</pre>
+
+        <h3>AlphaNumeric validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>allowWhiteSpace</strong> - boolean true or false, if true white space is allowed, default false</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Only alphanumeric characters are allowed</td><td>%s = the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('alphaNumeric', array('allowWhiteSpace' =&gt; true));</pre>
+        <pre>$element-&gt;addValidator('alphaNumeric', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; '%s does not contain only alphanumeric characters'
+    )
+));</pre>
+
+        <h3>Captcha validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>not_match</td><td>The value does not match</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('captcha');</pre>
+        <pre>$element-&gt;addValidator('captcha', array(
+    'messages' =&gt; array('not_match' =&gt; 'Incorrect captcha solution')
+));</pre>
+
+        <h3>ChoiceCount validator</h3>
+        <p>This validator validates the number of choices in a Multi Checkbox or Multi Select element.</p>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>min</strong> - (integer) the minimum allowed number of choices</li>
+            <li><strong>max</strong> - (integer) the maximum allowed number of choices</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Value is an invalid type, it must be an array</td><td>&nbsp;</td></tr>
+            <tr><td>too_few</td><td>Please select at least %1$s value(s)</td><td>%1$s = the configured minimum<br>%2$s = the count of the submitted value</td></tr>
+            <tr><td>too_many</td><td>Please select no more than %1$s value(s)</td><td>%1$s = the configured maximum<br>%2$s = the count of the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('choiceCount', array(
+    'min' => 1,
+    'max' => 3
+));</pre>
+        <pre>$element-&gt;addValidator('choiceCount', array(
+    'min' => 1,
+    'max' => 3,
+    'messages' => array(
+        'too_few' => 'At least %1$s choice is required',
+        'too_many' => 'No more than %1$s choices are allowed'
+    )
+));</pre>
+
+        <h3>Date validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>This is not a valid date</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('date', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; 'Please enter a valid date'
+    )
+));</pre>
+
+        <h3>Digits validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>allowWhiteSpace</strong> - boolean true or false, if true white space is allowed, default false</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Only digits are allowed</td><td>%s = the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('digits', array('allowWhiteSpace' =&gt; true));</pre>
+        <pre>$element-&gt;addValidator('digits', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; '%s does not contain only digits'
+    )
+));</pre>
+
+        <h3>Email validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Invalid email address</td><td>%s = the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('email');</pre>
+        <pre>$element-&gt;addValidator('email', array(
+    'messages' =&gt; array('invalid' =&gt; 'The email address %s is invalid')
+));</pre>
+
+        <h3>EmailConfirm validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>key</strong> - (string) the unique name of the other email element, default 'email'</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>not_match</td><td>The email addresses do not match</td><td>%s = the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('emailConfirm');</pre>
+        <pre>$element-&gt;addValidator('emailConfirm', array(
+    'messages' =&gt; array('not_match' =&gt; 'The email addresses are not the same')
+));</pre>
+
+        <h3>FileUpload validator</h3>
+        <p>The validator is automatically registered with your file upload elements, see the file uploads section above for options.</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>x_required</td><td>At least %d files are required</td><td>%d = the number of required files</td></tr>
+            <tr><td>one_required</td><td>At least 1 file is required</td><td>&nbsp;</td></tr>
+            <tr><td>required</td><td>This field is required</td><td>&nbsp;</td></tr>
+            <tr><td>x_too_big</td><td>'%s' exceeds the maximum allowed file size</td><td>%s = the filename</td></tr>
+            <tr><td>too_big</td><td>File exceeds the maximum allowed file size</td><td>&nbsp;</td></tr>
+            <tr><td>x_only_partial</td><td>'%s' was only partially uploaded</td><td>%s = the filename</td></tr>
+            <tr><td>only_partial</td><td>File was only partially uploaded</td><td>&nbsp;</td></tr>
+            <tr><td>no_file</td><td>No file was uploaded</td><td>&nbsp;</td></tr>
+            <tr><td>missing_temp_folder</td><td>Missing a temporary folder</td><td>&nbsp;</td></tr>
+            <tr><td>failed_to_write</td><td>Failed to write file to disk</td><td>&nbsp;</td></tr>
+            <tr><td>stopped_by_extension</td><td>File upload stopped by extension</td><td>&nbsp;</td></tr>
+            <tr><td>x_bad_type</td><td>File type of '%s' is not allowed</td><td>%s = the filename</td></tr>
+            <tr><td>bad_type</td><td>File type is not allowed</td><td>&nbsp;</td></tr>
+            <tr><td>x_not_uploaded</td><td>File '%s' is not an uploaded file</td><td>%s = the filename</td></tr>
+            <tr><td>not_uploaded</td><td>File is not an uploaded file</td><td>&nbsp;</td></tr>
+            <tr><td>unknown</td><td>Unknown upload error</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$upload-&gt;getFileUploadValidator()-&gt;setMessageTemplates(array(
+    'required' =&gt; 'Please upload a file',
+    'unknown' =&gt; 'Upload failed, please try again'
+));</pre>
+
+        <h3>GreaterThan validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>min</strong> - (integer|string) the value must be greater than min (numerically)</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>not_numeric</td><td>Value is not numeric</td><td>%1$s = the submitted value<br />%2$d = the set minimum</td></tr>
+            <tr><td>not_greater_than</td><td>%1$s is not greater than %2$d</td><td>%1$s = the submitted value<br />%2$d = the set minimum</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('greaterThan', array('min' =&gt; 3));</pre>
+        <pre>$element-&gt;addValidator('greaterThan', array(
+    'messages' =&gt; array(
+        'not_numeric' =&gt; 'Please enter a number',
+        'not_greater_than' =&gt; '%1$s is not greater than %2$d, please change the value'
+    )
+));</pre>
+
+        <h3>Honeypot validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>empty</td><td>This field should be empty</td><td>&nbsp;</tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('honeypot');</pre>
+        <pre>$element-&gt;addValidator('honeypot', array(
+    'messages' =&gt; array(
+        'empty' =&gt; 'Leave this field blank'
+    )
+));</pre>
+
+        <h3>Identical validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>token</strong> - (mixed) the token to compare the value against</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>not_match</td><td>Value does not match</td><td>%1$s = the submitted value<br />%2$s = the set token</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('identical', array('token' =&gt; 'light'));</pre>
+        <pre>$element-&gt;addValidator('identical', array(
+    'messages' =&gt; array(
+        'not_match' =&gt; '%1$s does not match %2$s'
+    )
+));</pre>
+
+        <h3>InArray validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>haystack</strong> - (array) the array of possible values</li>
+            <li><strong>strict</strong> - (boolean) whether to check data type as well as value, default true</li>
+            <li><strong>invert</strong> - (boolean) whether to invert the check (i.e. value must not be in the array)</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>not_in_array</td><td>The given value is not valid</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('inArray', array(
+    'haystack' =&gt; array(
+        'Value 1', 'Value 2', 'Value 3'
+    ),
+    'messages' =&gt; array(
+        'not_in_array' =&gt; 'This value is not allowed'
+    )
+));</pre>
+
+        <h3>LessThan validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>max</strong> - (integer|string) the value must be less than max (numerically)</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>not_less_than</td><td>%1$s is not less than %2$d</td><td>%1$s = the submitted value<br />%2$d = the set maximum</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('lessThan', array('max' =&gt; 10));</pre>
+        <pre>$element-&gt;addValidator('lessThan', array(
+    'messages' =&gt; array(
+        'not_less_than' =&gt; '%1$s is not less than %2$d, please change the value'
+    )
+));</pre>
+
+        <h3>reCAPTCHA validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>secretKey</strong> - (string) the reCAPTCHA secret key</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>missing-input-secret</td><td>The secret parameter is missing</td><td>&nbsp;</td></tr>
+            <tr><td>invalid-input-secret</td><td>The secret parameter is invalid or malformed</td><td>&nbsp;</td></tr>
+            <tr><td>missing-input-response</td><td>The response parameter is missing</td><td>&nbsp;</td></tr>
+            <tr><td>invalid-input-response</td><td>The response parameter is invalid or malformed</td><td>&nbsp;</td></tr>
+            <tr><td>error</td><td>An error occurred, please try again</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('recaptcha');</pre>
+        <pre>$element-&gt;addValidator('captcha', array(
+    'messages' =&gt; array('invalid-input-secret' =&gt; 'The reCAPTCHA was invalid')
+));</pre>
+
+        <h3>Regex validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>pattern</strong> - (string) the regex pattern</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Invalid type given. String, integer or float expected</td><td>&nbsp;</td></tr>
+            <tr><td>not_match</td><td>The given value is not valid</td><td>%s = the given value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('regex', array(
+    'pattern' =&gt; '/\d+/',
+    'messages' =&gt; array(
+        'not_match' =&gt; 'The given value "%s" is not a valid number'
+    )
+));</pre>
+
+        <h3>Required validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>required</td><td>This field is required</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('required');</pre>
+        <pre>$element-&gt;addValidator('required', array(
+    'messages' =&gt; array('required' =&gt; 'Please fill out this field')
+));</pre>
+
+        <h3>StringLength validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>min</strong> - (integer) the minumum length of the string</li>
+            <li><strong>max</strong> - (integer) the maximum length of the string, if not specified there is no maximum</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Value is an invalid type, it must be a string</td><td>&nbsp;</td></tr>
+            <tr><td>too_short</td><td>Value must be at least %1$d characters long</td><td>%1$d = the set minimum<br />%2$s = the submitted value<br />%3$d = the length of the submitted value</td></tr>
+            <tr><td>too_long</td><td>Value must be no longer than %1$d characters</td><td>%1$d = the set maximum<br />%2$s = the submitted value<br />%3$d = the length of the submitted value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('stringLength', array('min' =&gt; 5, 'max' =&gt; 10));</pre>
+        <pre>$element-&gt;addValidator('stringLength', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; 'Sorry, the value must be a string',
+        'too_short' =&gt; 'Your submitted value %2$s must be at least %1$d characters long, but it was %3$d',
+        'too_long' =&gt; 'Your submitted value %2$s must be no longer than %1$d characters, but it was %3$d'
+    )
+));</pre>
+
+        <h3>Time validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>This is not a valid time</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('time', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; 'Please enter a valid time'
+    )
+));</pre>
+
+        <h3>WordCount validator</h3>
+        <h4>Options</h4>
+        <ul>
+            <li><strong>min</strong> - (integer) the minumum number of words</li>
+            <li><strong>max</strong> - (integer) the maximum number of words, if not specified there is no maximum</li>
+        </ul>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Value is an invalid type, it must be a string</td><td>&nbsp;</td></tr>
+            <tr><td>too_short</td><td>Value must contain at least %1$d words</td><td>%1$d = the set minimum<br />%2$s = the given value<br />%3$d = the number of words in the given value</td></tr>
+            <tr><td>too_long</td><td>Value must contain no more than %1$d words</td><td>%1$d = the set maximum<br />%2$s = the given value<br />%3$d = the number of words in the given value</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('wordCount', array(
+    'min' =&gt; 10,
+    'max' =&gt; 100
+    'messages' =&gt; array(
+        'too_short' =&gt; 'Please enter more than %1$d words',
+        'too_long' =&gt; 'Please enter no more than %1$d words, you entered %3$d words'
+    )
+));</pre>
+
+        <h3>CreditCard validator</h3>
+        <h4>Options</h4>
+        <p>None</p>
+        <h4>Error messages</h4>
+        <table class="options">
+            <tr><th>Key</th><th>Default</th><th>Placeholders</th></tr>
+            <tr><td>invalid</td><td>Invalid credit card number</td><td>&nbsp;</td></tr>
+        </table>
+        <h4>Examples</h4>
+        <pre>$element-&gt;addValidator('creditCard', array(
+    'messages' =&gt; array(
+        'invalid' =&gt; 'The credit card number is not valid'
+    )
+));</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Adding a new filter (Advanced)</h2>
+      <div>
+        <p>If you want to add a new filter you should first check out the files in the folder <code>quform/lib/Quform/Filter/</code>.
+        You will find the code for existing filters which should give you an idea of how to make your
+        own.  What you need to do is add a new class in that folder for your new filter, however there are a few things you should note.</p>
+        <ul>
+            <li>Your filter must have its own class with a name that begins with Quform_Filter_</li>
+            <li>The name of the file should be the part of the class name after Quform_Filter_ and end with .php</li>
+            <li>Your filter class must implement Quform_Filter_Interface</li>
+            <li>Your filter class must have a method called <code>filter()</code> that takes the given
+            value and returns the filtered value</li>
+        </ul>
+        <h3>Naming your filter</h3>
+        <p>Filters have a special naming system in order to add them to an element.  If you notice two of the
+        existing filter classes called Quform_Filter_StripTags and Quform_Filter_Trim which are added to element using
+        the names <strong>stripTags</strong> and <strong>trim</strong>. The conversion between short name and
+        class name happens automatically. To convert from short name to class name, make the first letter
+        uppercase and add Quform_Filter_ to the beginning.  To convert from class name to short name make the first letter
+        lowercase and remove Quform_Filter_ from the beginning.  If you made a new filter with the class name <code>Quform_Filter_MyNewFilter</code>
+        you could add it to an element using:</p>
+        <pre>$element-&gt;addFilters(array('myNewFilter'));</pre>
+        <p>You can also add the filter to the element by passing in an instance of it:</p>
+        <pre>$element-&gt;addFilter(new Quform_Filter_MyNewFilter());</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Adding a new validator (Advanced)</h2>
+      <div>
+        <p>Before adding a new validator you should take a look at the files in the folder <code>quform/lib/Quform/Validator/</code>.
+        You will find the code for existing validators which should give you an idea of how to make your own.
+        What you need to do is add a new class in that folder for your new validator, however there are a few things you should note.</p>
+        <ul>
+            <li>Your validator must have its own class with a name that begins with Quform_Validator_</li>
+            <li>The name of the file should be the part of the class name after Quform_Validator_ and end with .php</li>
+            <li>Your validator class must extend Quform_Validator_Abstract</li>
+            <li>Your validator class must have a method called <code>isValid()</code> that takes the given
+            value and returns true if the value is valid and false otherwise.</li>
+            <li>Inside the <code>isValid()</code> method you can add messages to display back to the user
+            to tell them why the value failed validation by using the code <code>$this-&gt;addMessage('Message to send to user');</code>.
+            That message will appear under the form element by default.</li>
+        </ul>
+        <h3>Naming your validator</h3>
+        <p>Validators have a special naming system in order to add them to an element.  If you notice two of the
+        existing validator classes called Quform_Validator_Required and Quform_Validator_Email which are added to element using
+        the names <strong>required</strong> and <strong>email</strong>. The conversion between short name and
+        class name happens automatically. To convert from short name to class name, make the first letter
+        uppercase and add Quform_Validator_ to the beginning.  To convert from class name to short name make the first letter
+        lowercase and remove Quform_Validator_ from the beginning.  If you made a new validator with the class name <code>Quform_Validator_MyNewValidator</code>
+        you could add it to an element using:</p>
+        <pre>$element-&gt;addValidators(array('myNewValidator'));</pre>
+        <p>You can also add the validator to the element by passing in an instance of it:</p>
+        <pre>$element-&gt;addValidator(new Quform_Validator_MyNewValidator());</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Working with forms with deep nested arrays (Advanced)</h2>
+      <div>
+       <p>If you have set up your form elements such that they are using deep nested array structure in their names as shown below.</p>
+       <pre>&lt;input type="text" name="customer_info[delivery_details][postcode]" /&gt;</pre>
+       <p>You will need to call the following code during form element configuration:</p>
+       <pre>$element-&gt;setIsArray(true);</pre>
+       <p>This will tell the form to expect an array for the value submitted and the element will not work properly without it. NOTE: Single level arrays
+       such as multiple value elements:</p>
+       <pre>&lt;input type="checkbox" name="toppings[]" /&gt;</pre>
+       <p>DO NOT need the <code>setIsArray(true);</code> code. One level deeper than that and things will not work (the value will not be passed correctly to the form
+       element so it may appear blank in the email) and you WILL NEED to use <code>setIsArray(true);</code>.</p>
+       </div>
+      <h1>Troubleshooting<a id="four" class="top-link" href="#toc">Top</a></h1>
+      <h2 class="toggler toggler-closed">You do not receive the email</h2>
+      <div>
+        <p>If you do not receive the email at all, or only some of the time, it usually means your host is blocking the email as a spam prevention measure or they are being caught by spam or junk filters. There are a few things you can try to get it working.</p>
+
+        <h2>Solution #1 - set a "From" address</h2>
+        <p>Some hosts will block emails that have a "From" address that is not associated with the hosting account (as a spam prevention measure). To fix this, in the process.php file configure the <code>$config['from']</code> option to an email address that is associated with the hosting account. It's even more likely to work if this email address is an existing mailbox, and the email domain is the same as the domain of the website containing the form. For example, for the Notification email the option is:</p>
+
+        <pre>$config['from'] = 'info@yourdomain.com';</pre>
+
+        <p>For the Autoreply email the option is:</p>
+
+        <pre>$config['autoreplyFrom'] = 'info@yourdomain.com';</pre>
+
+        <h2>Solution #2 - try a different recipient email address</h2>
+        <p>Try a different recipient email address in case there is an issue delivering to only the current email address.</p>
+
+        <p>If you have more than one recipient email address, try setting up the form to send to a single recipient to see if it works in that case. Some hosts may block emails with 2 or more recipients.</p>
+
+        <h2>Solution #3 - check Junk/Spam folders</h2>
+        <p>Sometimes the email may be wrongly flagged as spam. Check the Junk/Spam folder on the email account to see if the message arrived in there. If the email consistently arrives in the Junk folder, you can add the configured "From" address to your Contacts, or set up a Filter in your email software to always send the email to your inbox based on the "From" address or Subject.</p>
+
+        <h2>Solution #4 - use an SMTP server to send email</h2>
+        <p>Using an SMTP server to send email is usually more reliable than using the PHP mail() function. See the section above <a href="#sending-emails-via-an-smtp-server">Sending emails via an SMTP server</a> for how to set this up and suggestions for free and premium reliable SMTP servers.</p>
+
+        <h2>Solution #5 - use the mail-check.php file to test email sending</h2>
+        <p>Quform uses the PHP <code>mail()</code> function (via the <a href="https://github.com/PHPMailer/PHPMailer" target="_blank">PHPMailer library</a>) to send the email by default.  Some web hosts may not allow you to use this function or require that you set certain headers. So we need to find out if you can send a simple email using your web server. We have created a test script for this, which is located at <code>quform/mail-check.php</code>. To set up the script open the file in a text editor and read the introductory comment then follow the instructions given.</p>
+        <p>If the script indicates there is a problem with the <code>mail()</code> function on your server then you can try and set up the form to send the email via a SMTP server instead, such as your ISP's server.  See the section <a href="#sending-emails-via-an-smtp-server">Sending emails via an SMTP server</a>.</p>
+
+        <h2>Solution #6 - set local MX records</h2>
+        <p>This only applies if the domain of the site has MX records that are different from the domain itself, in other words the email for the domain is handled by a different server than the web server. For example the site uses Google Apps emails and has an MX record ASPMX.L.GOOGLE.COM. When the mail server tries to deliver the email it detects that the domain is on the same server and tries to deliver locally so it will never arrive at Google. The solution is to set a local MX record (not DNS) to tell the mail server to deliver the email externally. The problem is described in more detail on <a href="https://support.google.com/a/answer/55299?hl=en">Google's help page</a>. You should probably contact your host and ask them to set it up. There is a Bluehost specific help page <a href="https://my.bluehost.com/cgi/help/232">here</a> which may also apply to other hosts using cPanel.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Form does not submit</h2>
+      <div>
+      <p>This could happen for a lot of reasons.  Look for JavaScript errors in the status bar of your web browser, if there is an error with another script it may also
+      break the contact form.</p>
+      <p>We recommend using the <a href="http://getfirebug.com/">Firebug</a> extension for debugging if you do not already.  If you enable the Net tab you will be able
+      to see the Ajax requests being sent and received by the form and this can help to debug any problems you have in the PHP code because it isn't obvious when
+      working with an Ajax application.</p>
+      <p>A good way to check for errors is to <a href="http://www.google.co.uk/search?q=disable+JavaScript+in+your+browser" class="popup">disable JavaScript in your browser</a> and submit the form, any errors that are in your PHP code will be sent to the browser instead of silently back to the JavaScript so
+      this might help you find some problems.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Submitting the form takes me to another page</h2>
+      <p>This most likely means there is a JavaScript error on the page and the form is reverting to submitting in non-JavaScript mode. Once you
+      find and fix the error the form should submit in Ajax mode. It could also mean that the Quform JavaScript links in the head of the page are
+      missing or loaded incorrectly.</p>
+      <h2 class="toggler toggler-closed">File upload troubleshooting</h2>
+      <div>
+        <h3>Email does not arrive</h3>
+        <p>If your email doesn't arrive, try it again without the file upload field. If it still doesn't arrive
+        then try the suggestions in the "You do not receive email" section above. If the email only doesn't
+        arrive when you have a file upload field, you might be exceeding email size limits of your web
+        host or one of the relays, so try a really small attachment.  If it still does not work, contact
+        us and we'll try and help you fix it.</p>
+        <h3>Email does not have attachments</h3>
+        <p>Double check you have added the file upload element to the form in <code>process.php</code>, as described in the file uploads section above.</p>
+        <h3>Maximum file size problems</h3>
+        <p>By default PHP only allows an <code>upload_max_filesize</code> of 2MB.  You will need to change this setting
+        in php.ini to your value, if you don't have access to change php.ini check with your web host
+        about how to change PHP settings.  Many hosts will allow you to make changes to these values.  The other
+        value you will need to check is <code>post_max_size</code>, which is needs to be larger than your
+        <code>upload_max_filesize</code> value.</p>
+        <h3>Form returns this field is required for all fields</h3>
+        <p>You may be exceeding limit the PHP ini directive <code>post_max_size</code> which apparently
+        sets $_POST and $_FILES to empty arrays, thus your form will say that these fields are required. So
+        increase the limit.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Conflicts with other JavaScript libraries (prototype or Mootools etc)</h2>
+       <div>
+        <p>If your web page uses another JavaScript library such as prototype or Mootools etc your form might not submit so you may need to
+        set jQuery into noConflict mode for the form to still work correctly.  To do this, open <code>js/scripts.js</code> and on
+        <strong>line 1</strong> add this code before anything else:</p>
+        <pre>jQuery.noConflict();</pre>
+       </div>
+      <h2 class="toggler toggler-closed">Fatal error: Uncaught exception 'phpmailerException' with message 'Could not instantiate mail function.'</h2>
+      <div>
+        <p>This error is caused by one of the following reasons:</p>
+        <ul>
+            <li>Your host is blocking the email being sent</li>
+            <li>Your server is not configured to send email via the PHP mail() function</li>
+        </ul>
+        <p>See below for solutions.</p>
+        <h3>Your host is blocking the email being sent</h3>
+        <p>Some hosts may block emails under certain circumstances, the most common reason is that the "From" address of the email is not set
+        to an email address that is associated with your hosting account. You can try changing the <code>$config['from']</code> setting in <code>process.php</code>
+        so that it's set to an address that is associated with your hosting account. If this still does not work, you can set the form up
+        to send via a SMTP server. See the section above called <a href="#sending-emails-via-an-smtp-server">Sending emails via an SMTP server</a>.</p>
+        <h3>Your server is not configured to send email via the PHP mail() function</h3>
+        <p>You should contact your hosting company and ask them to set this up on your server. If this is not a possibility, you can set the form up
+        to send via a SMTP server. See the section above called <a href="#sending-emails-via-an-smtp-server">Sending emails via an SMTP server</a>.</p>
+      </div>
+      <h2 class="toggler toggler-closed">Fatal error: Uncaught exception 'phpmailerException' with message 'Invalid address: '</h2>
+      <div>
+        <p>You are receiving this error because you have not specified at least one recipient for the notification email. To fix this, open <code>process.php</code>
+        and enter an email address for the <code>$config['recipients']</code> setting. For example:</p>
+        <pre>$config['recipients'] = 'me@example.com';</pre>
+      </div>
+      <h2 class="toggler toggler-closed">The emails are shown to be from "Root User &lt;root@localhost&gt;"</h2>
+      <div>
+        <p>You have not specified a "From" address for the email. The steps to fix this are different for the notification email and the autoreply email,
+        see the revelant sections below.</p>
+        <h3>Notification email</h3>
+        <p>Open <code>process.php</code> and enter an email address for the <code>$config['from']</code> setting. For example:</p>
+        <pre>$config['from'] = 'company@example.com';</pre>
+        <h3>Autoreply email</h3>
+        <p>Open <code>process.php</code> and enter an email address for the <code>$config['autoreplyFrom']</code> setting. For example:</p>
+        <pre>$config['autoreplyFrom'] = 'company@example.com';</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Character encoding issues</h2>
+      <div>
+        <p>Quform supports most non-English languages. If you have problems with characters not displaying correctly, you may have inadvertantly
+        changed the character encoding of the index.html file or the file containing your form is not saved in UTF-8 encoding.</p>
+        <p>To save the file in UTF-8 encoding the method varies for different text editors, Google <span class="bold">[your text editor] save as utf-8</span>
+        for instructions. For example in Windows Notepad you can set the encoding of the file by going to File &rarr; Save As...</p>
+        <p><img src="assets/save-as-utf8.png" alt="Save the file with UTF-8 encoding"></p>
+        <p>Also make sure you have a charset meta tag set to UTF-8 in the head of the page, see the section above <a href="#charset" class="section-link">Using another character encoding</a> for examples.</p>
+      </div>
+      <h2 class="toggler toggler-closed">There was a problem: An error occurred and the response from the server was empty.</h2>
+      <div>
+        <p>There is something wrong but error reporting is turned off on your server and our script was not able to
+        enable error reporting. You will need to enable error reporting on your server, or if your server is set up to log PHP errors to a file, check the
+        error log file (if you don't know where it is, ask your host).</p>
+        <h3>Enable error reporting on your server</h3>
+        <p>In your php.ini file modify the <code>display_errors</code> directive so that its On. If you don't know how to do this, ask your host.</p>
+        <pre>display_errors = On</pre>
+      </div>
+      <h2 class="toggler toggler-closed">Debug mode</h2>
+      <div>
+	      <p>By default debug mode is enabled, this means that Quform will try to show PHP errors and exceptions
+	      inside your form, otherwise they would be silently hidden in an Ajax request.</p>
+	      <h3>Disable debug mode</h3>
+	      <p>To disable debug mode change the code at the top of <strong>process.php</strong> to <code>define('QUFORM_DEBUG', false);</code>.</p>
+	      <h3>Enable debug mode</h3>
+	      <p>To enable debug mode change the code at the top of <strong>process.php</strong> to <code>define('QUFORM_DEBUG', true);</code>.</p>
+	      <h3>Errors are still not showing</h3>
+	      <p>You should disable JavaScript (or comment out line 2 of js/scripts.js) and any PHP errors will be shown when submitting the form.</p>
+	      <h3>Errors are STILL not showing</h3>
+	      <p>In this case, you may need to check your PHP or Apache error logs.</p>
+      </div>
+
+      <h1>Further support<a id="five" class="top-link" href="#toc">Top</a></h1>
+      <p>For additional help, please visit our <a href="http://support.themecatcher.net/" class="popup">support website</a> and <a href="http://support.themecatcher.net/forums" class="popup">support forums</a>. You can also contact us using the form on our <a class="popup" href="http://codecanyon.net/user/ThemeCatcher">CodeCanyon profile page</a>. You must be
+      logged in to CodeCanyon to see the form.</p>
+
+    </div><!-- /#content -->
+</div>
+</div>
+<!-- End Wrapper -->
+
+<script src="assets/jquery-3.5.1.min.js"></script>
+<script src="assets/scripts.js"></script>
+</body>
+</html>

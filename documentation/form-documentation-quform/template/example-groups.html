@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Quform - Responsive Ajax Contact Form</title>
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="quform/css/page.css" />
+<link rel="stylesheet" type="text/css" href="quform/css/base.css" />
+<link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" />
+</head>
+<body>
+<div class="template-outside">
+
+    <!-- To copy the form HTML, start here -->
+    <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process-groups.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Groups</h3>
+                <p class="quform-description">This is an example of various Group layouts.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin 1 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">1 Column Group</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-1cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-full-width quform-fat quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="text_input1">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input class="quform-tooltip" id="text_input1" type="text" name="text_input1" data-tippy-content="This is a &quot;fat&quot; text input field." />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 1 column Group -->
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">2 Column Group</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input2">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input2" type="text" name="text_input2" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input3">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input3" type="text" name="text_input3" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+                    <!-- Begin 3 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">3 Column Group</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-3cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input4">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input4" type="text" name="text_input4" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input5">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input5" type="text" name="text_input5" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input6">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input6" type="text" name="text_input6" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 3 column Group -->
+
+                    <!-- Begin 4 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">4 Column Group</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-4cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input7">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input7" type="text" name="text_input7" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input8">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input8" type="text" name="text_input8" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input9">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input9" type="text" name="text_input9" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input10">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input10" type="text" name="text_input10" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 4 column Group -->
+
+                    <!-- Begin 5 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">5 Column Group</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-5cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input11">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input11" type="text" name="text_input11" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input12">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input12" type="text" name="text_input12" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input13">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input13" type="text" name="text_input13" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input14">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input14" type="text" name="text_input14" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input15">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input15" type="text" name="text_input15" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 5 column Group -->
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">2 Column Group with 2 rows</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input16">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input16" type="text" name="text_input16" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input17">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input17" type="text" name="text_input17" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input18">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input18" type="text" name="text_input18" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input19">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input19" type="text" name="text_input19" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-title-description-wrap">
+                                <div class="quform-group-title">2 Column Group with 2 nested Groups</div>
+                                <p class="quform-group-description">This is a group description</p>
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input20">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input20" type="text" name="text_input20" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text quform-full-width">
+                                    <div class="quform-spacer">
+                                        <label for="text_input21">Text input <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="text_input21" type="text" name="text_input21" />
+                                            <p class="quform-description">This is an element description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin 2 column Group - nested Group -->
+                                <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                                    <div class="quform-group-elements">
+
+                                        <div class="quform-group-title-description-wrap">
+                                            <div class="quform-group-title">2 Column Group with 2 rows</div>
+                                            <p class="quform-group-description">This is a group description</p>
+                                        </div>
+
+                                        <div class="quform-group-row quform-group-row-2cols">
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input22">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input22" type="text" name="text_input22" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input23">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input23" type="text" name="text_input23" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                        </div>
+
+                                        <div class="quform-group-row quform-group-row-2cols">
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input24">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input24" type="text" name="text_input24" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input25">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input25" type="text" name="text_input25" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End 2 column Group - nested Group  -->
+
+                                <!-- Begin 2 column Group - nested Group  -->
+                                <div class="quform-group-wrap quform-group-style-bordered quform-group-alignment-proportional">
+                                    <div class="quform-group-elements">
+
+                                        <div class="quform-group-title-description-wrap">
+                                            <div class="quform-group-title">2 Column Group with 2 rows</div>
+                                            <p class="quform-group-description">This is a group description</p>
+                                        </div>
+
+                                        <div class="quform-group-row quform-group-row-2cols">
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input26">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input26" type="text" name="text_input26" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input27">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input27" type="text" name="text_input27" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                        </div>
+
+                                        <div class="quform-group-row quform-group-row-2cols">
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input28">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input28" type="text" name="text_input28" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                            <!-- Begin Text input element -->
+                                            <div class="quform-element quform-element-text quform-med">
+                                                <div class="quform-spacer">
+                                                    <label for="text_input29">Text input <span class="quform-required">*</span></label>
+                                                    <div class="quform-input">
+                                                        <input id="text_input29" type="text" name="text_input29" />
+                                                        <p class="quform-description">This is an element description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Text input element -->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End 2 column Group - nested Group -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+
+               </div><!-- .quform-elements -->
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+</div>
+<script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="quform/js/plugins.js"></script>
+<script type="text/javascript" src="quform/js/scripts.js"></script>
+</body>
+</html>

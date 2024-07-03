@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Quform - Responsive Ajax Contact Form</title>
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="quform/css/page.css" />
+<link rel="stylesheet" type="text/css" href="quform/css/base.css" />
+<link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" />
+</head>
+<body>
+<div class="template-outside">
+
+    <!-- To copy the form HTML, start here -->
+    <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process-validators.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Validation examples</h3>
+                <p class="quform-description">Fields can have as many validators as you need on them. Empty fields are only validated if they are also required.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="between_three_six">String length <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="between_three_six" id="between_three_six" />
+                                <p class="quform-description">Between 3 and 6 characters allowed (customisable).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="digits">Digits <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="digits" id="digits" />
+                                <p class="quform-description">Only digits allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="alphanumeric">Alphanumeric <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="alphanumeric" id="alphanumeric" />
+                                <p class="quform-description">Only alphanumeric characters allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="alphabet">Alphabet <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="alphabet" id="alphabet" />
+                                <p class="quform-description">Only alphabet characters allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="less_than_3">Less than <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="less_than_3" id="less_than_3" />
+                                <p class="quform-description">Must be less than 3 numerically (customisable).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="greater_than_3">Greater than <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="greater_than_3" id="greater_than_3" />
+                                <p class="quform-description">Must be greater than 3 numerically (customisable).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text quform-huge">
+                        <div class="quform-spacer">
+                            <label for="word_count">Word count <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <textarea name="word_count" id="word_count" class="quform-textarea"></textarea>
+                                <p class="quform-description">Must have between 5 and 10 words (customisable).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="in_array">In array <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="in_array" id="in_array" />
+                                <p class="quform-description">Must be one of the words 'theme', 'catcher' or 'quform' (customisable).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="regex">Regex <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="regex" id="regex" />
+                                <p class="quform-description">Must match the given regular expression pattern,
+                                in this example the pattern is /[\d+]/ which means the input must contain at least one digit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+               </div>
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+</div>
+<script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="quform/js/plugins.js"></script>
+<script type="text/javascript" src="quform/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/*
+ * Theme Name: Quform [Your Theme Name]
+ * Description: [Descbribe your theme].
+ * Version: 1.0 (For Quform PHP)
+ * Author: ThemeCatcher
+ * Author URI: https://www.themecatcher.net/
+ */
+
+/*****************************************************
+0: Read Me (Remove this section):
+******************************************************/
+/*
+
+If you are looking to style your forms with your own design, you've come to the right place.
+This Blank Theme has all the selectors you need to style Quform. We have kept in a few things that
+you might not be fussed about changing, like error messages, close buttons etc.
+
+Remember to change the names of the files; see the help doc for more info:  > Styling forms > Creating a new theme.
+
+You can donate or sell your theme if you like. Get in touch with us if this interests you.
+
+ -- TC
+
+*/
+
+/*****************************************************
+1: Form heading and description
+******************************************************/
+/*Set global fonts*/
+.quform-theme-blank-new {
+
+}
+/*Form Heading*/
+.quform-theme-blank-new h3.quform-title {
+
+}
+/*Form description*/
+.quform-theme-blank-new p.quform-description {
+
+}
+
+/*****************************************************
+2: Elements and labels
+******************************************************/
+
+/*Required - this is the text that is used to indicate a required field*/
+.quform-theme-blank-new .quform-element label span.quform-required {
+    color: #cc0101;
+}
+/*Element description*/
+.quform-theme-blank-new .quform-element p.quform-description {
+
+}
+/*Default state input, selects and textareas*/
+.quform-theme-blank-new .quform-elements .quform-element-text input,
+.quform-theme-blank-new .quform-elements .quform-element-captcha input,
+.quform-theme-blank-new .quform-elements .quform-element-password input,
+.quform-theme-blank-new .quform-elements .quform-element select,
+.quform-theme-blank-new .quform-elements .quform-element textarea {
+
+}
+.quform-theme-blank-new .quform-elements .quform-element select {padding: 1px;}
+/*Fix Chrome select (no background image sorry!) Add a background color if you use a BG image for Select*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.quform-theme-blank-new .quform-elements .quform-element select {
+
+	}
+}
+/*Hover element*/
+.quform-theme-blank-new .quform-elements .quform-element-text input:hover,
+.quform-theme-blank-new .quform-elements .quform-element-captcha input:hover,
+.quform-theme-blank-new .quform-elements .quform-element-password input:hover,
+.quform-theme-blank-new .quform-elements .quform-element select:hover,
+.quform-theme-blank-new .quform-elements .quform-element textarea:hover {
+
+}
+/*Active element*/
+.quform-theme-blank-new .quform-elements .quform-element-text input:active,
+.quform-theme-blank-new .quform-elements .quform-element-captcha input:active,
+.quform-theme-blank-new .quform-elements .quform-element-password input:active,
+.quform-theme-blank-new .quform-elements .quform-element select:active,
+.quform-theme-blank-new .quform-elements .quform-element textarea:active {
+
+}
+/*Focused element*/
+.quform-theme-blank-new .quform-elements .quform-element-text input:focus,
+.quform-theme-blank-new .quform-elements .quform-element-captcha input:focus,
+.quform-theme-blank-new .quform-elements .quform-element-password input:focus,
+.quform-theme-blank-new .quform-elements .quform-element select:focus,
+.quform-theme-blank-new .quform-elements .quform-element textarea:focus {
+
+}
+/*Fix Chrome select (no background image sorry!) Add a background color if you use a BG image for Select */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.quform-theme-blank-new .quform-elements .quform-element select {
+
+	}
+}
+
+/* Default Label*/
+.quform-theme-blank-new .quform-element > .quform-spacer > label {
+
+}
+/*Tooltip icon*/
+.quform-theme-blank-new .quform-tooltip-icon {
+	background: url(images/help-icon-light.png) no-repeat 0 0;
+}
+/*Select options*/
+.quform-theme-blank-new select option {
+    padding-right: 10px;
+}
+.quform-theme-blank-new select[multiple="multiple"] option {
+    padding: 0 5px;
+}
+/*****************************************************
+4: Captcha
+******************************************************/
+
+/*Refresh captcha icon background*/
+.quform-theme-blank-new .quform-captcha-inner {
+	margin-top: 3px;
+	border: 1px solid #ccc;
+}
+/*****************************************************
+5: Element groups
+******************************************************/
+
+/*Group title & description wrap plain*/
+.quform-theme-blank-new .quform-group-style-plain > .quform-group-elements .quform-group-title-description-wrap {
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+}
+/*Group title plain*/
+.quform-theme-blank-new .quform-group-style-plain > .quform-group-elements .quform-group-title {
+	padding: 5px 0 0;
+}
+/*Group description plain*/
+.quform-theme-blank-new .quform-group-style-plain > .quform-group-elements p.quform-group-description {
+	padding: 0;
+}
+/*IE fix for negative margins used below*/
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-elements {min-width: 1px;}
+/*Group title & description wrap bordered*/
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-elements .quform-group-title-description-wrap {
+	margin: -10px -10px 10px -10px;
+	padding-bottom: 5px;
+}
+/*Group title bordered*/
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-elements .quform-group-title {
+
+	padding: 5px 10px 0;
+	margin: 0;
+}
+/*Group description bordered*/
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-elements p.quform-group-description {
+
+	padding: 2px 10px 0;
+	margin: 0;
+}
+/*Bordered style group*/
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-elements {
+
+}
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-row {
+}
+/*One row inside a group*/
+.quform-theme-blank-new .quform-group-style-bordered > .quform-group-elements .quform-group-row {
+
+	margin-bottom: 10px;
+}
+.quform-theme-blank-new .quform-group-style-plain > .quform-group-elements .quform-group-row {
+	background: none;
+	margin-bottom: 0;
+}
+.quform-theme-blank-new .quform-group-style-bordered .quform-group-row:last-child {
+	background: none;
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+/*****************************************************
+6: Submit button and related
+******************************************************/
+/*Note: Submit button has 3 parts; You only need to add styles to the Span and the Em, the Button part is just a container. */
+.quform-theme-blank-new .quform-submit button {border: 1px outset #ccc;} /* optional - IE7 fix */
+/*Submit button wrap*//*You might want to use float:right here. Change loading icon wrap below too*/
+.quform-theme-blank-new .quform-submit-inner {}
+/*Submit button hide*/
+.quform-theme-blank-new .quform-submit button {
+	border: none;
+	background: none;
+	text-align: center;
+	width: auto;
+	overflow: visible;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	height: auto;
+	cursor: pointer;
+	max-width: 100%;
+}
+/*Submit button default state*/
+.quform-theme-blank-new .quform-submit button span {
+
+}
+/*Default*/
+.quform-theme-blank-new .quform-submit button span {
+
+}
+/*Hover*/
+.quform-theme-blank-new .quform-submit button:hover span {
+}
+/*Active*/
+.quform-theme-blank-new .quform-submit button:active span {
+}
+/*Default*/
+.quform-theme-blank-new .quform-submit button em {
+	background: transparent; /* Add Right image*/
+}
+/*Hover*/
+.quform-theme-blank-new .quform-submit button:hover em {
+
+}
+/*Active*/
+.quform-theme-blank-new .quform-submit button:active em {
+
+}
+/*Loading the submit*//*You will want this float:right if the button is right*/
+.quform-theme-blank-new .quform-loading-wrap {margin-top: 9px;}
+.quform-theme-blank-new .quform-button-fat .quform-loading-wrap {margin-top: 18px;}
+/*Loading gif image*/
+.quform-theme-blank-new .quform-loading-wrap .quform-loading {}
+/*****************************************************
+7: Messages for user
+******************************************************/
+
+/*Errors*/
+.quform-theme-blank-new .quform-errors > .quform-error {
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	text-shadow: 1px 1px 0 #f3d6d4;
+}
+/*File upload errors*/
+.quform-theme-blank-new .quform-queue-errors-list > .quform-queue-error {
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	text-shadow: 1px 1px 0 #f3d6d4;
+}
+
+/*Success message*/
+.quform-theme-blank-new .quform-success-message {
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	text-shadow: 1px 1px 0 #e0fdc3;
+}
+/*****************************************************
+8: Quform PHP specific
+******************************************************/
+/*Light close button*/
+.quform-theme-blank-new.quform-outer a.quform-cancel-button {
+	background: url(images/close-light.png) no-repeat 0 0;
+}
+
+/*****************************************************
+9: Responsive
+******************************************************/
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait and below (devices and browser) */
+@media only screen and (max-width: 768px) {
+	/* Make radio and checkboxes a bit easier to select on touch devices - Try using your input styles here! */
+	.quform-theme-blank-new .quform-options .quform-option {
+
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+}

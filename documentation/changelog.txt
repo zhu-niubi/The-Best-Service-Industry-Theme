@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------
+Version v2.0 - 05th April, 2022
+--------------------------------------------------------------------------
+
+	- NEW: Demo - Gardener
+	- NEW: Demo - Car Wash
+	- NEW: Demo - Roofing
+	- NEW: Demo - Laundry
+	- NEW: Demo - Decorator
+	- NEW: Demo - Courier
+	- NEW: Demo - Tech Repair
+	- NEW: Demo - Electrician
+	- NEW: Demo - Plumber
+	- NEW: Demo - Mechanic
+	- NEW: Demo - Cleaning
+	- NEW: Demo - Shop Pages
+	- NEW: Revolution Slider Added
+	- NEW: Features Added
+	- NEW: Added New Footer Styles
+	- NEW: Added New Header Styles
+	- UPDATED - Portfolio Gallery
+	- UPDATED - CSS Updated
+	- UPDATED: Latest jQuery
+	- UPDATED: Latest Bootstrap Version
+	- UPDATED: Default CSS
+	- UPDATED: Classes, Maximum Use of Bootstrap Classes
+	- UPDATED: Latest Fontawesome
+	- UPDATED: Font Typography
+ 
+--------------------------------------------------------------------------
+Version v1.0 - 04th February, 2021
+--------------------------------------------------------------------------
+
+ - Initial release

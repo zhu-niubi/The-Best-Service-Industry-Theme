@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Quform - Responsive Ajax Contact Form</title>
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="quform/css/page.css" />
+<link rel="stylesheet" type="text/css" href="quform/css/base.css" />
+<link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" />
+</head>
+<body>
+<div class="template-outside">
+
+    <!-- To copy the form HTML, start here -->
+    <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process-filters.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Filter examples</h3>
+                <p class="quform-description">You will need to purchase the form to see the filtered values in your email inbox :). Fields can have as many filters as you need on them.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="trim_filter">Trim filter <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="trim_filter" id="trim_filter" />
+                                <p class="quform-description">White space removed from the start and end.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="strip_tags_filter">Strip tags filter <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="strip_tags_filter" id="strip_tags_filter" />
+                                <p class="quform-description">Strips all HTML tags excluding any you want to allow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="digits_filter">Digits filter <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="digits_filter" id="digits_filter" />
+                                <p class="quform-description">Removes all characters that are not digits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="alphanumeric_filter">Alphanumeric filter <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="alphanumeric_filter" id="alphanumeric_filter" />
+                                <p class="quform-description">Removes all characters that are not alphanumeric.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="alpha_filter">Alphabet filter <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="alpha_filter" id="alpha_filter" />
+                                <p class="quform-description">Removes all characters that are not alphabetic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Text input element -->
+                    <div class="quform-element quform-element-text">
+                        <div class="quform-spacer">
+                            <label for="regex_filter">Regex filter <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input type="text" name="regex_filter" id="regex_filter" />
+                                <p class="quform-description">Removes all characters matching the given regular expression pattern,
+                                in this example the pattern is /[\d+]/ which will strip any digits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text input element -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+               </div>
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+</div>
+<script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="quform/js/plugins.js"></script>
+<script type="text/javascript" src="quform/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Quform - Responsive Ajax Contact Form</title>
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="quform/css/page.css" />
+<link rel="stylesheet" type="text/css" href="quform/css/base.css" />
+<link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" />
+</head>
+<body>
+<div class="template-outside">
+
+    <!-- To copy the form HTML, start here -->
+    <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process-multi-form1.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Simple contact form</h3>
+                <p class="quform-description">You can have multiple forms on the same page with their own configuration, this first form is a simple contact form example.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-plain quform-group-alignment-left">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="first_name">First name <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="first_name" type="text" name="first_name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="last_name">Last name <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="last_name" type="text" name="last_name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="email_address">Email address <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="email_address" type="text" name="email_address" title="We will never send you spam." />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Subject element -->
+                                <div class="quform-element quform-element-select">
+                                    <div class="quform-spacer">
+                                        <label for="subject">Subject</label>
+                                        <div class="quform-input">
+                                            <select class="quform-tooltip" id="subject" name="subject" data-tippy-content="Try selecting 'Other'">
+                                                <option value="General enquiry">General enquiry</option>
+                                                <option value="Sales enquiry">Sales enquiry</option>
+                                                <option value="Support enquiry">Support enquiry</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Subject element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+                    <!-- Begin Textarea element -->
+                    <div class="quform-element quform-element-textarea quform-huge">
+                        <div class="quform-spacer">
+                            <label for="message">Message <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <textarea id="message" name="message" class="quform-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Textarea element -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+               </div>
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+    <!-- ==============  Quform second form starts here ============== --> <div class="break"> </div>
+
+    <!-- To copy the form HTML, start here -->
+    <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process-multi-form2.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Subscribe to our newsletter</h3>
+                <p class="quform-description">This is the second form, an example email subscription form.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-plain quform-group-alignment-left">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-row quform-group-row-3cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="full_name">Full name <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="full_name" type="text" name="full_name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="email">Email addresss <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="email" type="text" name="email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Submit button -->
+                                <div class="quform-submit quform-submit-inline">
+                                    <div class="quform-submit-inner">
+                                        <button type="submit"><span><em>Send</em></span></button>
+                                    </div>
+                                    <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                                </div>
+                                <!-- End Submit button -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+               </div>
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+</div>
+<script type="text/javascript" src="quform/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="quform/js/plugins.js"></script>
+<script type="text/javascript" src="quform/js/scripts.js"></script>
+</body>
+</html>
